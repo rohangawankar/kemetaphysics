@@ -236,7 +236,46 @@
                            <span class="block md:inline" itemprop="startDate" content="2024-01-18T10:00:00-06:00">January 18, 10 AM CST</span>
                         </p>
                      </div>
-                     <div class="mt-12 animate__animated animate__fadeIn animate__delay-2s element-highlight">
+                     <!-- MOBILE-ONLY VIDEO (block on mobile, hidden on md and up) -->
+                     <div class="block md:hidden relative w-full aspect-video bg-gray-800 rounded-lg overflow-hidden">
+                        <!-- Thumbnail -->
+                        <img 
+                           src="./src/img/thumbnail3.png" 
+                           alt="Soul Integration Workshop Preview" 
+                           class="absolute inset-0 w-full h-full object-cover z-10 rounded-lg opacity-90" 
+                           loading="lazy" 
+                           id="video-thumbnail-mobile"
+                        >
+                        <!-- Play Button -->
+                        <div 
+                           id="play-button-mobile" 
+                           class="absolute inset-0 flex items-center justify-center z-20 cursor-pointer"
+                        >
+                           <div class="w-20 h-20 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors">
+                              <svg 
+                                 class="w-12 h-12 text-white" 
+                                 fill="currentColor" 
+                                 viewBox="0 0 24 24" 
+                                 aria-label="Play video"
+                              >
+                                 <path d="M8 5v14l11-7z"></path>
+                              </svg>
+                           </div>
+                        </div>
+                        <!-- Video -->
+                        <video 
+                           class="absolute inset-0 w-full h-full object-cover rounded-lg hidden" 
+                           id="video-element-mobile" 
+                           controls 
+                           playsinline
+                        >
+                           <source src="./src/video/soul_integration.mp4" type="video/mp4">
+                           Your browser does not support the video tag.
+                        </video>
+                     </div>
+                     <!-- END MOBILE-ONLY VIDEO -->
+
+                     <!-- <div class="mt-12 animate__animated animate__fadeIn animate__delay-2s element-highlight">
                         <button class="bg-[#FFD700] text-black px-8 py-4 rounded-full text-xl font-bold hover:bg-[#FFF176] transition-colors duration-300 animate__animated animate__pulse animate__infinite w-full md:w-auto" onclick="window.location.href='#payment'" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
                            <meta itemprop="price" content="25.00">
                            <meta itemprop="priceCurrency" content="USD">
@@ -263,11 +302,92 @@
                            </svg>
                            <span>Secure Checkout</span>
                         </div>
+                     </div> -->
+                     <!-- Wrapper with text-center on mobile, text-left on md+ -->
+                     <div
+                     class="mt-12 animate__animated animate__fadeIn animate__delay-2s element-highlight text-center md:text-left"
+                     >
+                     <!-- Center button on mobile with mx-auto, revert to normal on md+ -->
+                     <button
+                     class="bg-[#FFD700] text-black px-8 py-4 rounded-full text-xl font-bold hover:bg-[#FFF176] transition-colors duration-300 animate__animated animate__pulse animate__infinite w-full md:w-auto mx-auto md:mx-0"
+                     onclick="window.location.href='#payment'"
+                     itemprop="offers"
+                     itemscope
+                     itemtype="http://schema.org/Offer"
+                     >
+                     <meta itemprop="price" content="25.00" />
+                     <meta itemprop="priceCurrency" content="USD" />
+                     SECURE YOUR SPOT - $25
+                     </button>
+
+                     <p class="text-white/80 mt-2">
+                     Usually $99 - Save 75% Today
+                     </p>
                      </div>
+
+                     <!-- Bullet points container: stack and center on mobile, row on md+ -->
+                     <div
+                     class="flex flex-col items-center md:items-start md:flex-row gap-4 md:gap-8 mt-8"
+                     >
+                     <div class="text-white flex items-center gap-2">
+                     <svg
+                        class="w-6 h-6 text-[#FFD700]"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                     >
+                        <path
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                           stroke-width="2"
+                           d="M5 13l4 4L19 7"
+                        ></path>
+                     </svg>
+                     <span>Live Interactive Session</span>
+                     </div>
+
+                     <div class="text-white flex items-center gap-2">
+                     <svg
+                        class="w-6 h-6 text-[#FFD700]"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                     >
+                        <path
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                           stroke-width="2"
+                           d="M5 13l4 4L19 7"
+                        ></path>
+                     </svg>
+                     <span>100% Satisfaction</span>
+                     </div>
+
+                     <div class="text-white flex items-center gap-2">
+                     <svg
+                        class="w-6 h-6 text-[#FFD700]"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                     >
+                        <path
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                           stroke-width="2"
+                           d="M5 13l4 4L19 7"
+                        ></path>
+                     </svg>
+                     <span>Secure Checkout</span>
+                     </div>
+                     </div>
+
                   </div>
                   <!-- Right column - Video placeholder (hidden on mobile) -->
-                  <div class="relative w-full aspect-video bg-gray-800 rounded-lg overflow-hidden">
-                    <!-- Thumbnail -->
+                  <div class="hidden md:block relative w-full aspect-video bg-gray-800 rounded-lg overflow-hidden">
+                     <!-- Thumbnail -->
                     <img 
                         src="./src/img/thumbnail3.png" 
                         alt="Soul Integration Workshop Preview" 
