@@ -1,37 +1,33 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    let stripe; // Declare `stripe` in a higher scope
-    let elements; // Declare `elements` in a higher scope
+    let stripe;
+    let elements;
 
     try {
         // Fetch configuration from the backend
-        const response = await fetch('https://kemetaphysics.vercel.app/config'); // Replace with your backend URL
+        const response = await fetch('/api/config'); // Updated URL
         if (!response.ok) throw new Error('Failed to load configuration');
 
         const { publicKey, publicDomain } = await response.json();
-
-        // Ensure the values are correctly fetched
         if (!publicKey || !publicDomain) throw new Error('Missing configuration values');
 
         console.log('Stripe Public Key:', publicKey);
         console.log('Public Domain:', publicDomain);
 
-        // Initialize Stripe with the public key
         stripe = Stripe(publicKey);
 
         // Fetch the PaymentIntent client secret from the backend
-        const { clientSecret } = await fetch(`${publicDomain}/create-payment-intent`, {
+        const { clientSecret } = await fetch(`/api/create-payment-intent`, { // Updated URL
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ amount: 2500, currency: 'usd' }),
         }).then((res) => res.json());
 
-        // Initialize Stripe Elements with clientSecret
         elements = stripe.elements({ clientSecret });
         const paymentElement = elements.create('payment', { layout: 'tabs' });
         paymentElement.mount('#payment-element');
     } catch (error) {
         console.error('Error:', error.message);
-        return; // Exit the function to prevent further errors
+        return;
     }
 
     // Handle "Continue to Payment" button
