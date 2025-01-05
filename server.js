@@ -36,10 +36,15 @@ app.get('/', (req, res) => {
 
 
 app.get('/config', (req, res) => {
-  res.send({
-    publicKey: process.env.STRIPE_PUBLIC_KEY,
-    publicDomain: process.env.PUBLIC_DOMAIN,
-  });
+  try {
+    res.send({
+      publicKey: process.env.STRIPE_PUBLIC_KEY,
+      publicDomain: process.env.PUBLIC_DOMAIN,
+    });
+  } catch (error) {
+    console.error("Error in /config:", error); 
+    res.status(500).send({ error: "Failed to retrieve config" });
+  }
 });
 
 module.exports = app; // Export the app for Vercel
