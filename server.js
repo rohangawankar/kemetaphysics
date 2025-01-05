@@ -26,6 +26,15 @@ app.post('/create-payment-intent', async (req, res) => {
   }
 });
 
+// Serve static files from the root directory or public folder
+app.use(express.static(path.join(__dirname)));
+
+// Route root URL to index.html
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+
 app.get('/config', (req, res) => {
   res.send({
     publicKey: process.env.STRIPE_PUBLIC_KEY,
