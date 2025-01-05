@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     try {
         // Fetch configuration from the backend
-        const response = await fetch('https://kemetaphysics.vercel.app:3000/config'); // Replace with your backend URL
+        const response = await fetch('https://kemetaphysics.vercel.com/config'); // Replace with your backend URL
         if (!response.ok) throw new Error('Failed to load configuration');
 
         const { publicKey, publicDomain } = await response.json();
