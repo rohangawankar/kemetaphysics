@@ -23,42 +23,57 @@
         });
     </script>   
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const playButton = document.getElementById('play-button');
-            const thumbnail = document.getElementById('video-thumbnail');
-            const video = document.getElementById('video-element');
-
-            // Handle Play Button Click
-            playButton.addEventListener('click', () => {
-                thumbnail.style.display = 'none'; // Hide the thumbnail explicitly
-                playButton.style.display = 'none'; // Hide the play button explicitly
-                video.classList.remove('hidden'); // Show the video
-                video.play(); // Start video playback
-            });
-
-            // Handle Video Pause/End Events
-            video.addEventListener('pause', () => {
-                thumbnail.style.display = 'block'; // Show the thumbnail explicitly
-                playButton.style.display = 'flex'; // Show the play button explicitly
-                video.classList.add('hidden'); // Hide the video
-            });
-
-            video.addEventListener('ended', () => {
-                thumbnail.style.display = 'block'; // Show the thumbnail explicitly
-                playButton.style.display = 'flex'; // Show the play button explicitly
-                video.classList.add('hidden'); // Hide the video
-            });
-        });
-    </script>
-
-
-                 
+      <script>
+         document.addEventListener('DOMContentLoaded', () => {
+         // A small helper function to attach the same logic to a given set of IDs
+         function setupVideoControls(playBtnId, thumbnailId, videoId) {
+            const playButton = document.getElementById(playBtnId);
+            const thumbnail = document.getElementById(thumbnailId);
+            const video = document.getElementById(videoId);
+      
+            // Only proceed if all elements exist (to avoid errors on pages without them)
+            if (playButton && thumbnail && video) {
+               // Handle Play Button Click
+               playButton.addEventListener('click', () => {
+               thumbnail.style.display = 'none'; 
+               playButton.style.display = 'none'; 
+               video.classList.remove('hidden'); 
+               video.play(); 
+               });
+      
+               // Handle Video Pause
+               video.addEventListener('pause', () => {
+               thumbnail.style.display = 'block'; 
+               playButton.style.display = 'flex'; 
+               video.classList.add('hidden'); 
+               });
+      
+               // Handle Video End
+               video.addEventListener('ended', () => {
+               thumbnail.style.display = 'block'; 
+               playButton.style.display = 'flex'; 
+               video.classList.add('hidden'); 
+               });
+            }
+         }
+      
+         // Apply the same logic to both desktop and mobile sets (if they exist)
+         setupVideoControls('play-button', 'video-thumbnail', 'video-element');
+         setupVideoControls('play-button-mobile', 'video-thumbnail-mobile', 'video-element-mobile');
+         });
+      </script>                 
       <style>
-         html, body { margin: 0; padding: 0; height: 100%; }
+         /* In your global CSS (e.g., styles.css) */
+         html, body {
+         margin: 0;
+         padding: 0;
+         height: 100%;
+         background-color: #000;  /* or your black shade */
+         overflow-x: hidden;
+         }
       </style>
    </head>
-   <body>
+   <body class="m-0 p-0 bg-black overflow-x-hidden">
       <section id="section-9ff77e38-8980-46c5-a393-bedbc334f65a">
          <div id="root">
             <nav id="navbar" class="fixed w-full bg-black/90 backdrop-blur-sm z-50 transition-all duration-300" role="navigation" aria-label="Main navigation">
