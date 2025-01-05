@@ -28,10 +28,9 @@ app.post('/create-payment-intent', async (req, res) => {
 
 app.get('/config', (req, res) => {
   res.send({
-      publicKey: process.env.STRIPE_PUBLIC_KEY,
-      publicDomain: process.env.PUBLIC_DOMAIN,
+    publicKey: process.env.STRIPE_PUBLIC_KEY,
+    publicDomain: process.env.PUBLIC_DOMAIN,
   });
 });
 
-
-app.listen(3000, () => console.log('Server running on http://localhost:3000'));
+module.exports = app; // Export the app for Vercel
