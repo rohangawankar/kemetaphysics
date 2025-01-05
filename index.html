@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html>
    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://cdn.tailwindcss.com"></script>
-        <title>Soul Integration Accelerator</title>
-        <link rel="icon" type="image/png" href="src/img/logo.png">
-        <script>
-        document.title = "Soul Integration Accelerator";
-        </script>
-        
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+      <script src="https://cdn.tailwindcss.com"></script>
+      <title>Soul Integration Accelerator</title>
+      <link rel="icon" type="image/png" href="src/img/logo.png">
+      <script>
+         document.title = "Soul Integration Accelerator";
+      </script>
       <script src="https://js.stripe.com/v3/"></script>
       <script src="/src/stripe.js"></script>
       <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            fetch('footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer-placeholder').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading footer:', error));
-        });
-    </script>   
-
+         document.addEventListener('DOMContentLoaded', () => {
+             fetch('footer.html')
+                 .then(response => response.text())
+                 .then(data => {
+                     document.getElementById('footer-placeholder').innerHTML = data;
+                 })
+                 .catch(error => console.error('Error loading footer:', error));
+         });
+      </script>   
       <script>
          document.addEventListener('DOMContentLoaded', () => {
          // A small helper function to attach the same logic to a given set of IDs
@@ -30,7 +28,7 @@
             const playButton = document.getElementById(playBtnId);
             const thumbnail = document.getElementById(thumbnailId);
             const video = document.getElementById(videoId);
-      
+         
             // Only proceed if all elements exist (to avoid errors on pages without them)
             if (playButton && thumbnail && video) {
                // Handle Play Button Click
@@ -40,14 +38,14 @@
                video.classList.remove('hidden'); 
                video.play(); 
                });
-      
+         
                // Handle Video Pause
                video.addEventListener('pause', () => {
                thumbnail.style.display = 'block'; 
                playButton.style.display = 'flex'; 
                video.classList.add('hidden'); 
                });
-      
+         
                // Handle Video End
                video.addEventListener('ended', () => {
                thumbnail.style.display = 'block'; 
@@ -56,7 +54,7 @@
                });
             }
          }
-      
+         
          // Apply the same logic to both desktop and mobile sets (if they exist)
          setupVideoControls('play-button', 'video-thumbnail', 'video-element');
          setupVideoControls('play-button-mobile', 'video-thumbnail-mobile', 'video-element-mobile');
@@ -69,13 +67,17 @@
          padding: 0;
          height: 100%;
          background-color: #000;  /* or your black shade */
+         position: relative;
+         width: 100%;
          /* overflow-x: hidden; */
          }
+         
+         
       </style>
    </head>
-   <body class="m-0 p-0 bg-black ">
+   <body class="m-0 p-0 bg-black">
       <section id="section-9ff77e38-8980-46c5-a393-bedbc334f65a">
-         <div id="root" class="overflow-x-hidden">
+         <div id="root">
             <nav id="navbar" class="fixed w-full bg-black/90 backdrop-blur-sm z-50 transition-all duration-300" role="navigation" aria-label="Main navigation">
                <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
                   <div class="flex items-center justify-between h-20">
@@ -119,16 +121,14 @@
                         </a>
                      </nav>
                      <!-- Mobile Menu Button -->
-                     <button id="menuBtn" 
-                        class="inline-flex items-center md:hidden text-white p-2 transition-transform duration-300 hover:scale-110" 
-                        aria-label="Toggle mobile menu" 
-                        aria-expanded="false"
-                        aria-controls="mobileMenu">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                           <path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" class="transition-transform duration-300"></path>
-                           <path id="closeIcon" class="hidden transition-transform duration-300" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
-                     </button>
+                     <div class="menu-button-wrapper relative z-50 pr-4">
+                        <button id="menuBtn" class="inline-flex items-center md:hidden text-white p-2 transition-transform duration-300 hover:scale-110" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileMenu">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" class="transition-transform duration-300"></path>
+                                <path id="closeIcon" class="hidden transition-transform duration-300" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
                   </div>
                   <!-- Mobile Menu -->
                   <div id="mobileMenu" 
@@ -260,19 +260,19 @@
                            class="absolute inset-0 w-full h-full object-cover z-10 rounded-lg opacity-90" 
                            loading="lazy" 
                            id="video-thumbnail-mobile"
-                        >
+                           >
                         <!-- Play Button -->
                         <div 
                            id="play-button-mobile" 
                            class="absolute inset-0 flex items-center justify-center z-20 cursor-pointer"
-                        >
+                           >
                            <div class="w-20 h-20 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors">
                               <svg 
                                  class="w-12 h-12 text-white" 
                                  fill="currentColor" 
                                  viewBox="0 0 24 24" 
                                  aria-label="Play video"
-                              >
+                                 >
                                  <path d="M8 5v14l11-7z"></path>
                               </svg>
                            </div>
@@ -283,13 +283,12 @@
                            id="video-element-mobile" 
                            controls 
                            playsinline
-                        >
+                           >
                            <source src="./src/video/soul_integration.mp4" type="video/mp4">
                            Your browser does not support the video tag.
                         </video>
                      </div>
                      <!-- END MOBILE-ONLY VIDEO -->
-
                      <!-- <div class="mt-12 animate__animated animate__fadeIn animate__delay-2s element-highlight">
                         <button class="bg-[#FFD700] text-black px-8 py-4 rounded-full text-xl font-bold hover:bg-[#FFF176] transition-colors duration-300 animate__animated animate__pulse animate__infinite w-full md:w-auto" onclick="window.location.href='#payment'" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
                            <meta itemprop="price" content="25.00">
@@ -297,8 +296,8 @@
                            SECURE YOUR SPOT - $25
                         </button>
                         <p class="text-white/80 mt-2">Usually $99 - Save 75% Today</p>
-                     </div>
-                     <div class="flex flex-col md:flex-row gap-4 md:gap-8 mt-8">
+                        </div>
+                        <div class="flex flex-col md:flex-row gap-4 md:gap-8 mt-8">
                         <div class="text-white flex items-center gap-2">
                            <svg class="w-6 h-6 text-[#FFD700]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
@@ -317,130 +316,121 @@
                            </svg>
                            <span>Secure Checkout</span>
                         </div>
-                     </div> -->
+                        </div> -->
                      <!-- Wrapper with text-center on mobile, text-left on md+ -->
                      <div
-                     class="mt-12 animate__animated animate__fadeIn animate__delay-2s element-highlight text-center md:text-left"
-                     >
-                     <!-- Center button on mobile with mx-auto, revert to normal on md+ -->
-                     <button
-                     class="bg-[#FFD700] text-black px-8 py-4 rounded-full text-xl font-bold hover:bg-[#FFF176] transition-colors duration-300 animate__animated animate__pulse animate__infinite w-full md:w-auto mx-auto md:mx-0"
-                     onclick="window.location.href='#payment'"
-                     itemprop="offers"
-                     itemscope
-                     itemtype="http://schema.org/Offer"
-                     >
-                     <meta itemprop="price" content="25.00" />
-                     <meta itemprop="priceCurrency" content="USD" />
-                     SECURE YOUR SPOT - $25
-                     </button>
-
-                     <p class="text-white/80 mt-2">
-                     Usually $99 - Save 75% Today
-                     </p>
+                        class="mt-12 animate__animated animate__fadeIn animate__delay-2s element-highlight text-center md:text-left"
+                        >
+                        <!-- Center button on mobile with mx-auto, revert to normal on md+ -->
+                        <button
+                           class="bg-[#FFD700] text-black px-8 py-4 rounded-full text-xl font-bold hover:bg-[#FFF176] transition-colors duration-300 animate__animated animate__pulse animate__infinite w-full md:w-auto mx-auto md:mx-0"
+                           onclick="window.location.href='#payment'"
+                           itemprop="offers"
+                           itemscope
+                           itemtype="http://schema.org/Offer"
+                           >
+                           <meta itemprop="price" content="25.00" />
+                           <meta itemprop="priceCurrency" content="USD" />
+                           SECURE YOUR SPOT - $25
+                        </button>
+                        <p class="text-white/80 mt-2">
+                           Usually $99 - Save 75% Today
+                        </p>
                      </div>
-
                      <!-- Bullet points container: stack and center on mobile, row on md+ -->
                      <div
-                     class="flex flex-col items-center md:items-start md:flex-row gap-4 md:gap-8 mt-8"
-                     >
-                     <div class="text-white flex items-center gap-2">
-                     <svg
-                        class="w-6 h-6 text-[#FFD700]"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                     >
-                        <path
-                           stroke-linecap="round"
-                           stroke-linejoin="round"
-                           stroke-width="2"
-                           d="M5 13l4 4L19 7"
-                        ></path>
-                     </svg>
-                     <span>Live Interactive Session</span>
+                        class="flex flex-col items-center md:items-start md:flex-row gap-4 md:gap-8 mt-8"
+                        >
+                        <div class="text-white flex items-center gap-2">
+                           <svg
+                              class="w-6 h-6 text-[#FFD700]"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                              aria-hidden="true"
+                              >
+                              <path
+                                 stroke-linecap="round"
+                                 stroke-linejoin="round"
+                                 stroke-width="2"
+                                 d="M5 13l4 4L19 7"
+                                 ></path>
+                           </svg>
+                           <span>Live Interactive Session</span>
+                        </div>
+                        <div class="text-white flex items-center gap-2">
+                           <svg
+                              class="w-6 h-6 text-[#FFD700]"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                              aria-hidden="true"
+                              >
+                              <path
+                                 stroke-linecap="round"
+                                 stroke-linejoin="round"
+                                 stroke-width="2"
+                                 d="M5 13l4 4L19 7"
+                                 ></path>
+                           </svg>
+                           <span>100% Satisfaction</span>
+                        </div>
+                        <div class="text-white flex items-center gap-2">
+                           <svg
+                              class="w-6 h-6 text-[#FFD700]"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                              aria-hidden="true"
+                              >
+                              <path
+                                 stroke-linecap="round"
+                                 stroke-linejoin="round"
+                                 stroke-width="2"
+                                 d="M5 13l4 4L19 7"
+                                 ></path>
+                           </svg>
+                           <span>Secure Checkout</span>
+                        </div>
                      </div>
-
-                     <div class="text-white flex items-center gap-2">
-                     <svg
-                        class="w-6 h-6 text-[#FFD700]"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                     >
-                        <path
-                           stroke-linecap="round"
-                           stroke-linejoin="round"
-                           stroke-width="2"
-                           d="M5 13l4 4L19 7"
-                        ></path>
-                     </svg>
-                     <span>100% Satisfaction</span>
-                     </div>
-
-                     <div class="text-white flex items-center gap-2">
-                     <svg
-                        class="w-6 h-6 text-[#FFD700]"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                     >
-                        <path
-                           stroke-linecap="round"
-                           stroke-linejoin="round"
-                           stroke-width="2"
-                           d="M5 13l4 4L19 7"
-                        ></path>
-                     </svg>
-                     <span>Secure Checkout</span>
-                     </div>
-                     </div>
-
                   </div>
                   <!-- Right column - Video placeholder (hidden on mobile) -->
                   <div class="hidden md:block relative w-full aspect-video bg-gray-800 rounded-lg overflow-hidden">
                      <!-- Thumbnail -->
-                    <img 
+                     <img 
                         src="./src/img/thumbnail3.png" 
                         alt="Soul Integration Workshop Preview" 
                         class="absolute inset-0 w-full h-full object-cover z-10 rounded-lg opacity-90" 
                         loading="lazy" 
                         id="video-thumbnail"
-                    >
-                
-                    <!-- Play Button -->
-                    <div 
+                        >
+                     <!-- Play Button -->
+                     <div 
                         id="play-button" 
                         class="absolute inset-0 flex items-center justify-center z-20 cursor-pointer"
-                    >
+                        >
                         <div class="w-20 h-20 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors">
-                            <svg 
-                                class="w-12 h-12 text-white" 
-                                fill="currentColor" 
-                                viewBox="0 0 24 24" 
-                                aria-label="Play video"
-                            >
-                                <path d="M8 5v14l11-7z"></path>
-                            </svg>
+                           <svg 
+                              class="w-12 h-12 text-white" 
+                              fill="currentColor" 
+                              viewBox="0 0 24 24" 
+                              aria-label="Play video"
+                              >
+                              <path d="M8 5v14l11-7z"></path>
+                           </svg>
                         </div>
-                    </div>
-                
-                    <!-- Video -->
-                    <video 
+                     </div>
+                     <!-- Video -->
+                     <video 
                         class="absolute inset-0 w-full h-full object-cover rounded-lg hidden" 
                         id="video-element" 
                         controls 
                         playsinline
-                    >
+                        >
                         <source src="./src/video/soul_integration.mp4" type="video/mp4">
                         Your browser does not support the video tag.
-                    </video>
-                </div>
-                
-                  
+                     </video>
+                  </div>
                </div>
                <!-- Countdown Timer Section -->
                <div class="mt-12 animate__animated animate__fadeIn element-highlight flex flex-col items-center">
@@ -492,7 +482,6 @@
                       }
                   }, 1000);
                </script>
-
                <!-- Meta tags for SEO -->
                <meta name="description" content="Join our Soul Integration Accelerator - a transformative live virtual workshop on January 18, 2024. Learn powerful techniques for personal growth and spiritual development. Special offer: $25 (75% off)">
                <meta name="keywords" content="soul integration, spiritual workshop, personal development, virtual workshop, spiritual growth, meditation, mindfulness">
@@ -567,21 +556,25 @@
          <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
          <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
          <script>
-            // Initialize AOS with enhanced settings
             AOS.init({
-              offset: 120,
+              offset: 80,
               duration: 1000,
               easing: 'ease-out-cubic',
               delay: 100,
-              once: true,
-              mirror: false,
-              anchorPlacement: 'top-bottom'
+              once: false, // Allow animations to re-trigger
+              mirror: true, // Animate in reverse on scroll up
+              anchorPlacement: 'top-bottom',
+            });
+            
+            // Refresh AOS on page load or dynamic layout changes
+            window.addEventListener('load', () => {
+              AOS.refresh();
             });
          </script>
       </section>
       <!-- , -->
       <section id="section-1f056395-dbda-43d7-ba20-8cf2b5f34bb6">
-         <section id="testimonials" class="py-20 bg-white opacity-0 transition-opacity duration-1000 ease-in-out w-full is-visible" data-scroll-section="">
+         <section id="testimonials" class="py-20 bg-white opacity-0 transition-opacity duration-1000 ease-in-out w-full overflow-x-hidden is-visible" data-scroll-section="">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="el-fogca7dl">
                <!-- Title with enhanced animation -->
                <div class="text-center mb-16 opacity-0 transform translate-y-10 transition-all duration-1000 ease-out is-visible" data-scroll="" data-scroll-speed="1" id="el-zb8tk8xt">
@@ -1191,7 +1184,7 @@
       <!-- , -->
       <section id="section-9cd98008-8bcb-4848-bb74-85482ea64e9d">
          <!-- CTA Section with Enhanced SEO -->
-         <section id="cta" class="py-24 bg-black relative w-full aos-init aos-animate" data-aos="fade" itemscope="" itemtype="http://schema.org/Event">
+         <section id="cta" class="py-24 bg-black relative overflow-x-hidden w-full aos-init aos-animate" data-aos="fade" itemscope="" itemtype="http://schema.org/Event">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative" id="el-7nn1pmqz">
                <div class="text-center space-y-8" id="el-ntg47zy6">
                   <h1 class="text-white font-montserrat text-4xl md:text-6xl font-bold mb-8 aos-init aos-animate" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" itemprop="name" id="el-b34odt4v">
@@ -1231,8 +1224,8 @@
                   <!-- Sticky Mobile CTA -->
                   <div class="fixed bottom-0 left-0 right-0 w-full bg-black/90 p-4 md:hidden backdrop-blur-sm border-t border-[#FFC107]/20 animate-slideUp" id="el-48v5iuyn">
                      <!-- <button class="w-full bg-[#FFC107] text-black px-6 py-4 rounded-full font-montserrat font-bold text-lg hover:bg-[#FFD700] transition-all duration-300 relative overflow-hidden group" onclick="window.location.href='#payment'" id="el-optiyuvh"> -->
-                        <!-- <span class="relative z-10" id="el-34tn8xvc">SECURE YOUR SPOT - $25</span> -->
-                        <!-- <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shine" id="el-8kvplq4k"></div> -->
+                     <!-- <span class="relative z-10" id="el-34tn8xvc">SECURE YOUR SPOT - $25</span> -->
+                     <!-- <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shine" id="el-8kvplq4k"></div> -->
                      <!-- </button> -->
                   </div>
                </div>
@@ -1241,93 +1234,85 @@
          <!-- Payment Section with Enhanced SEO -->
          <section id="payment" class="py-20 bg-black" itemscope itemtype="http://schema.org/Order">
             <div class="max-w-4xl mx-auto px-4">
-              <div class="bg-white rounded-xl shadow-lg p-8">
-                <!-- Progress Steps -->
-                <div class="mb-8">
-                  <div class="w-full h-2 bg-gray-200 rounded-full">
-                    <div id="progress-bar" class="h-2 bg-[#FFC107] rounded-full transition-all duration-300" style="width: 33.33%"></div>
+               <div class="bg-white rounded-xl shadow-lg p-8">
+                  <!-- Progress Steps -->
+                  <div class="mb-8">
+                     <div class="w-full h-2 bg-gray-200 rounded-full">
+                        <div id="progress-bar" class="h-2 bg-[#FFC107] rounded-full transition-all duration-300" style="width: 33.33%"></div>
+                     </div>
                   </div>
-                </div>
-                
-                <!-- Step 1: Personal Details -->
-                <div id="step-1" class="space-y-6">
-                  <h2 class="text-2xl font-bold text-gray-800">Personal Details</h2>
-                  <form id="personal-form" class="space-y-4">
-                    <div>
-                        <label for="firstName" class="block text-sm font-medium text-gray-700">First Name</label>
-                        <input type="text" required name="firstName" id="firstName" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md">
-                    </div>
-                    <div>
-                        <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name</label>
-                        <input type="text" required name="lastName" id="lastName" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md">
-                    </div>
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                        <input type="email" required name="email" id="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md">
-                    </div>
-                    <button type="submit" class="w-full bg-[#FFC107] text-black px-6 py-3 rounded-full font-bold hover:bg-[#FFD700] transition-all duration-300">
+                  <!-- Step 1: Personal Details -->
+                  <div id="step-1" class="space-y-6">
+                     <h2 class="text-2xl font-bold text-gray-800">Personal Details</h2>
+                     <form id="personal-form" class="space-y-4">
+                        <div>
+                           <label for="firstName" class="block text-sm font-medium text-gray-700">First Name</label>
+                           <input type="text" required name="firstName" id="firstName" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md">
+                        </div>
+                        <div>
+                           <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name</label>
+                           <input type="text" required name="lastName" id="lastName" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md">
+                        </div>
+                        <div>
+                           <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                           <input type="email" required name="email" id="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md">
+                        </div>
+                        <button type="submit" class="w-full bg-[#FFC107] text-black px-6 py-3 rounded-full font-bold hover:bg-[#FFD700] transition-all duration-300">
                         Continue to Payment
-                    </button>
-                </form>                
-                </div>
-                
-                <!-- Step 2: Payment -->
-                <div id="step-2" class="space-y-6 hidden">
-                    <h2 class="text-2xl font-bold text-gray-800">Payment Details</h2>
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                      <p class="text-gray-600">
-                        Amount to Pay:
-                        <span class="font-bold text-gray-800">$25.00</span>
-                      </p>
-                    </div>
-                    <form id="payment-form" class="space-y-4">
-                      <!-- Stripe Payment Element -->
-                      <div id="payment-element"></div>
-                      <div id="error-message" class="text-red-500 text-sm mt-2"></div>
-                      <button id="submit-button" class="w-full bg-[#FFC107] text-black px-6 py-3 rounded-full font-bold hover:bg-[#FFD700] transition-all duration-300">
-                        Pay $25.00
-                      </button>
-                    </form>
-                  </div>                  
-            
-                <!-- Step 3: Success -->
-                <div id="step-3" class="text-center space-y-4 hidden">
-                    <!-- Success Icon -->
-                    <div id="success-icon" class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto hidden">
-                      <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                      </svg>
-                    </div>
-                  
-                    <!-- Error Icon -->
-                    <div id="error-icon" class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto hidden">
-                      <svg class="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                      </svg>
-                    </div>
-                  
-                    <!-- Success Message -->
-                    <h2 id="success-message" class="text-2xl font-bold text-gray-800 hidden">Thank You!</h2>
-                    <p id="success-description" class="text-gray-600 hidden">
-                      Your registration is confirmed. See you at the event!
-                    </p>
-                  
-                    <!-- Error Message -->
-                    <h2 id="error-message-header" class="text-2xl font-bold text-gray-800 hidden">Payment Failed</h2>
-                    <p id="error-description" class="text-gray-600 hidden">
-                      An error occurred. Please try again.
-                    </p>
-                  
-                    <!-- Retry Button -->
-                    <button id="try-again-button" class="w-full bg-[#FFC107] text-black px-6 py-3 rounded-full font-bold hover:bg-[#FFD700] transition-all duration-300 hidden">
-                      Try Again
-                    </button>
+                        </button>
+                     </form>
                   </div>
-                  
-              </div>
+                  <!-- Step 2: Payment -->
+                  <div id="step-2" class="space-y-6 hidden">
+                     <h2 class="text-2xl font-bold text-gray-800">Payment Details</h2>
+                     <div class="bg-gray-50 p-4 rounded-lg">
+                        <p class="text-gray-600">
+                           Amount to Pay:
+                           <span class="font-bold text-gray-800">$25.00</span>
+                        </p>
+                     </div>
+                     <form id="payment-form" class="space-y-4">
+                        <!-- Stripe Payment Element -->
+                        <div id="payment-element"></div>
+                        <div id="error-message" class="text-red-500 text-sm mt-2"></div>
+                        <button id="submit-button" class="w-full bg-[#FFC107] text-black px-6 py-3 rounded-full font-bold hover:bg-[#FFD700] transition-all duration-300">
+                        Pay $25.00
+                        </button>
+                     </form>
+                  </div>
+                  <!-- Step 3: Success -->
+                  <div id="step-3" class="text-center space-y-4 hidden">
+                     <!-- Success Icon -->
+                     <div id="success-icon" class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto hidden">
+                        <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                     </div>
+                     <!-- Error Icon -->
+                     <div id="error-icon" class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto hidden">
+                        <svg class="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                     </div>
+                     <!-- Success Message -->
+                     <h2 id="success-message" class="text-2xl font-bold text-gray-800 hidden">Thank You!</h2>
+                     <p id="success-description" class="text-gray-600 hidden">
+                        Your registration is confirmed. See you at the event!
+                     </p>
+                     <!-- Error Message -->
+                     <h2 id="error-message-header" class="text-2xl font-bold text-gray-800 hidden">Payment Failed</h2>
+                     <p id="error-description" class="text-gray-600 hidden">
+                        An error occurred. Please try again.
+                     </p>
+                     <!-- Retry Button -->
+                     <button id="try-again-button" class="w-full bg-[#FFC107] text-black px-6 py-3 rounded-full font-bold hover:bg-[#FFD700] transition-all duration-300 hidden">
+                     Try Again
+                     </button>
+                  </div>
+               </div>
             </div>
-          </section>
-        <!-- Footer with Enhanced SEO -->
+         </section>
+         <!-- Footer with Enhanced SEO -->
          <!-- SEO Meta Tags -->
          <meta name="description" content="Transform your life through soul integration. Join our transformative journey on January 18th to elevate your consciousness and unlock your true potential. Limited spots available at $25." id="el-s6fbuk7f">
          <meta name="keywords" content="soul integration, spiritual transformation, consciousness elevation, personal development, spiritual journey" id="el-9i0xcsjr">
@@ -1368,39 +1353,39 @@
          </style>
       </section>
       <section id="section-4b455069-39a0-412c-ada0-2739d82b46d2">
-        <div id="root">
+         <div id="root">
             <div id="footer-placeholder"></div>
             <style>
-                @keyframes fadeInUp {
-                from {
-                opacity: 0;
-                transform: translateY(20px);
-                }
-                to {
-                opacity: 1;
-                transform: translateY(0);
-                }
-                }
-                @keyframes fadeIn {
-                from {
-                opacity: 0;
-                }
-                to {
-                opacity: 1;
-                }
-                }
-                @keyframes scaleX {
-                from {
-                opacity: 0;
-                transform: scaleX(0);
-                }
-                to {
-                opacity: 1;
-                transform: scaleX(1);
-                }
-                }
-             </style>
-          </div>
-       </section>
+               @keyframes fadeInUp {
+               from {
+               opacity: 0;
+               transform: translateY(20px);
+               }
+               to {
+               opacity: 1;
+               transform: translateY(0);
+               }
+               }
+               @keyframes fadeIn {
+               from {
+               opacity: 0;
+               }
+               to {
+               opacity: 1;
+               }
+               }
+               @keyframes scaleX {
+               from {
+               opacity: 0;
+               transform: scaleX(0);
+               }
+               to {
+               opacity: 1;
+               transform: scaleX(1);
+               }
+               }
+            </style>
+         </div>
+      </section>
    </body>
 </html>
