@@ -9,6 +9,7 @@
   "routes": [
     { "src": "/", "dest": "/index.html" },
     { "src": "/config", "dest": "server.js" },
+    { "src": "/create-payment-intent", "dest": "server.js" },
     { "src": "/(.*)", "dest": "server.js" }
   ]
 }
