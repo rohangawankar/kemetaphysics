@@ -10,17 +10,17 @@ const actid = process.env.ACTIVE_CAMPAIGN_ACCOUNT_ID;
 const eventKey = process.env.ACTIVE_CAMPAIGN_EVENT_KEY;
 
 export default async function handler(req, res) {
-    console.log('Request received:', req.method, req.url);
+    // console.log('Request received:', req.method, req.url);
     if (req.method !== 'POST') {
         res.status(405).json({ error: 'Method not allowed' });
         return;
     }
 
     const { firstName, lastName, email, amount, productName } = req.body; // Add productName
-    console.log('Request body:', req.body);
+    // console.log('Request body:', req.body);
 
-    if (!firstName || !lastName || !email || !amount || !productName) { // Add productName validation
-        res.status(400).json({ error: 'Missing required fields: firstName, lastName, email, amount, or productName' });
+    if (!firstName || !lastName || !email) { // Add productName validation
+        res.status(400).json({ error: 'Missing required fields: firstName, lastName, email' });
         return;
     }
 
@@ -34,17 +34,10 @@ export default async function handler(req, res) {
                 email,
                 firstName,
                 lastName,
-                fieldValues: [
-                    {
-                        field: 'PURCHASE_AMOUNT', // Use the personalization tag in uppercase
-                        value: amount,
-                    },
-                ],
-                tags: [productName], // Add the product name as a tag
             },
         };
 
-        console.log('Contact Payload:', contactPayload);
+        // console.log('Contact Payload:', contactPayload);
 
         const contactResponse = await fetch(`${activeCampaignApiUrl}/api/3/contact/sync`, {
             method: 'POST',
@@ -55,7 +48,7 @@ export default async function handler(req, res) {
             body: JSON.stringify(contactPayload),
         });
 
-        console.log('Contact API Response Status:', contactResponse.status);
+        // console.log('Contact API Response Status:', contactResponse.status);
 
         if (!contactResponse.ok) {
             const errorText = await contactResponse.text();
@@ -65,7 +58,7 @@ export default async function handler(req, res) {
         }
 
         const contactData = await contactResponse.json();
-        console.log('Contact API Response Data:', contactData);
+        // console.log('Contact API Response Data:', contactData);
         const contactId = contactData.contact.id;
 
         // Step 2: Add the contact to the specified list
@@ -77,7 +70,7 @@ export default async function handler(req, res) {
             },
         };
 
-        console.log('List Payload:', listPayload);
+        // console.log('List Payload:', listPayload);
 
         const listResponse = await fetch(`${activeCampaignApiUrl}/api/3/contactLists`, {
             method: 'POST',
@@ -88,7 +81,7 @@ export default async function handler(req, res) {
             body: JSON.stringify(listPayload),
         });
 
-        console.log('List API Response Status:', listResponse.status);
+        // console.log('List API Response Status:', listResponse.status);
 
         if (!listResponse.ok) {
             const errorText = await listResponse.text();
@@ -97,10 +90,11 @@ export default async function handler(req, res) {
             return;
         }
         const listData = await listResponse.json();
-        console.log('List API Response Data:', listData);
+        // console.log('List API Response Data:', listData);
+
 
         res.json({
-            message: 'Contact successfully synced, added to list', 
+            message: 'Contact successfully synced, added to list', // Update success message
             contactData,
         });
 
