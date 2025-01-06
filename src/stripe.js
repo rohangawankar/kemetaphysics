@@ -21,8 +21,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         const paymentIntentResponse = await fetch('/api/create-payment-intent', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ amount: 2500, currency: 'usd' }),
+            body: JSON.stringify({
+                amount: 2500,
+                currency: 'usd',
+                customerData,
+            }),
         });
+        
         if (!paymentIntentResponse.ok) throw new Error('Failed to create payment intent');
         const { clientSecret } = await paymentIntentResponse.json();
 

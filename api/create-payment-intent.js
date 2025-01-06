@@ -1,17 +1,21 @@
-// api/create-payment-intent.js
 import { config } from 'dotenv';
 config();
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 export default async function handler(req, res) {
     try {
-        const { amount, currency } = req.body;
+        const { amount, currency, customerData } = req.body;
 
         const paymentIntent = await stripe.paymentIntents.create({
             amount,
             currency,
             automatic_payment_methods: {
                 enabled: true,
+            },
+            metadata: {
+                firstName: customerData?.firstName || '',
+                lastName: customerData?.lastName || '',
+                email: customerData?.email || '',
             },
         });
 
