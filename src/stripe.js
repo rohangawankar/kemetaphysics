@@ -46,39 +46,59 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.getElementById('progress-bar').style.width = '66.66%';
     });
 
+    // Handle Payment Submission
     document.getElementById('payment-form').addEventListener('submit', async (event) => {
         event.preventDefault();
 
         try {
-            const { error, paymentIntent } = await stripe.confirmPayment({
+            const { error } = await stripe.confirmPayment({
                 elements,
                 confirmParams: {},
                 redirect: 'if_required',
             });
 
             if (error) {
-                console.error('Payment failed:', error.message);
-                document.getElementById('step-3').classList.remove('hidden');
-                return;
-            }
-            // Ensure payment was successful
-            if (paymentIntent && paymentIntent.status === 'succeeded') {
-                // Update customerData with actual amount from paymentIntent
-                customerData.amount = paymentIntent.amount / 100;
-
-                // Send customer data to server-side for ActiveCampaign processing
-                await sendToActiveCampaign(customerData);
-
+                // Payment Failed: Show error message
                 document.getElementById('step-2').classList.add('hidden');
                 document.getElementById('step-3').classList.remove('hidden');
+
+                // Show error-related content
+                document.getElementById('error-icon').classList.remove('hidden');
+                document.getElementById('error-message-header').classList.remove('hidden');
+                document.getElementById('error-description').classList.remove('hidden');
+                document.getElementById('try-again-button').classList.remove('hidden');
             } else {
-                // Handle other paymentIntent statuses or errors
-                console.error('Payment did not succeed:', paymentIntent);
+                // Payment Successful: Send data to ActiveCampaign before showing confirmation
+                await sendToActiveCampaign(customerData);
+
+                // Show success UI
+                document.getElementById('step-2').classList.add('hidden');
                 document.getElementById('step-3').classList.remove('hidden');
+
+                // Show success-related content
+                document.getElementById('success-icon').classList.remove('hidden');
+                document.getElementById('success-message').classList.remove('hidden');
+                document.getElementById('success-description').classList.remove('hidden');
+                document.getElementById('progress-bar').style.width = '100%';
             }
-        } catch (error) {
-            console.error('Error during payment submission:', error);
+        } catch (err) {
+            console.error('Error during payment:', err);
+            document.getElementById('error-message').textContent = 'An error occurred. Please try again.';
         }
+    });
+
+    // Handle "Try Again" button
+    document.getElementById('try-again-button').addEventListener('click', () => {
+        // Reset the error message and transition back to the payment screen
+        document.getElementById('step-3').classList.add('hidden');
+        document.getElementById('step-2').classList.remove('hidden');
+        document.getElementById('progress-bar').style.width = '66.66%';
+
+        // Hide error-related content
+        document.getElementById('error-icon').classList.add('hidden');
+        document.getElementById('error-message-header').classList.add('hidden');
+        document.getElementById('error-description').classList.add('hidden');
+        document.getElementById('try-again-button').classList.add('hidden');
     });
 
     async function sendToActiveCampaign(data) {
@@ -101,8 +121,5 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    document.getElementById('try-again-button').addEventListener('click', () => {
-        document.getElementById('step-3').classList.add('hidden');
-        document.getElementById('step-2').classList.remove('hidden');
-    });
+
 }); 
