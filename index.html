@@ -87,84 +87,85 @@
    <body class="m-0 p-0 bg-black">
       <section id="section-9ff77e38-8980-46c5-a393-bedbc334f65a">
          <div id="root">
-            <nav id="navbar" class="fixed w-full bg-black/90 backdrop-blur-sm z-50 transition-all duration-300" role="navigation" aria-label="Main navigation">
-               <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-                  <div class="flex items-center justify-between h-20">
-                     <!-- Logo -->
-                     <div class="flex-shrink-0">
-                        <a href="#hero" class="block transform hover:scale-105 transition-transform duration-300" aria-label="KCL Home">
+          <nav id="navbar" class="fixed w-full bg-black/90 backdrop-blur-sm z-50 transition-all duration-300" role="navigation" aria-label="Main navigation">
+            <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+               <div class="flex items-center justify-between h-20">
+                  <!-- Logo -->
+                  <div class="flex-shrink-0">
+                     <a href="#hero" class="block transform hover:scale-105 transition-transform duration-300" aria-label="KCL Home">
                         <img src="src/img/logo.png" 
                            alt="KCL Logo" 
                            class="w-20 sm:w-24 h-auto pt-4 transition-all duration-300 opacity-100 hover:opacity-90" 
                            loading="lazy"
                            width="96"
                            height="96">
-                        </a>
-                     </div>
-                     <!-- Desktop Menu -->
-                     <nav class="hidden md:flex items-center space-x-8" aria-label="Desktop navigation">
-                        <a href="#hero" 
-                           class="text-white hover:text-[#FFC107] transition-all duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#FFC107] after:transition-all after:duration-300 hover:after:w-full"
-                           aria-label="Navigate to Home section">
-                        <span>Home</span>
-                        </a>
-                        <a href="#transformation" 
-                           class="text-white hover:text-[#FFC107] transition-all duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#FFC107] after:transition-all after:duration-300 hover:after:w-full"
-                           aria-label="Navigate to Process section">
-                        <span>Process</span>
-                        </a>
-                        <a href="#testimonials" 
-                           class="text-white hover:text-[#FFC107] transition-all duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#FFC107] after:transition-all after:duration-300 hover:after:w-full"
-                           aria-label="Navigate to Testimonials section">
-                        <span>Testimonials</span>
-                        </a>
-                        <a href="#eventdetails" 
-                           class="text-white hover:text-[#FFC107] transition-all duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#FFC107] after:transition-all after:duration-300 hover:after:w-full"
-                           aria-label="Navigate to Event Details section">
-                        <span>Event</span>
-                        </a>
-                        <a href="https://book.stripe.com/dR600lcNr86b4uI3cc" 
-                           class="bg-[#FFC107] text-black px-6 py-2 rounded-full font-semibold hover:bg-[#FFD700] transition-all duration-300 transform hover:scale-105 hover:shadow-lg animate-pulse"
-                           aria-label="Register for the event">
-                        <span>Register Now</span>
-                        </a>
-                     </nav>
-                     <!-- Mobile Menu Button -->
-                     <div class="menu-button-wrapper relative z-50 pr-4">
-                        <button id="menuBtn" class="inline-flex items-center md:hidden text-white p-2 transition-transform duration-300 hover:scale-110" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileMenu">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" class="transition-transform duration-300"></path>
-                                <path id="closeIcon" class="hidden transition-transform duration-300" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                            </svg>
-                        </button>
-                    </div>
+                     </a>
                   </div>
-                  <!-- Mobile Menu -->
-                  <div id="mobileMenu" 
-                     class="hidden md:hidden w-full transform transition-all duration-300 ease-in-out"
-                     aria-label="Mobile navigation">
-                     <div class="px-2 pt-2 pb-3 space-y-1">
-                        <a href="#hero" 
-                           class="block text-white hover:text-[#FFC107] py-2 transition-all duration-300 transform hover:translate-x-2"
-                           aria-label="Navigate to Home section">Home</a>
-                        <a href="#transformation" 
-                           class="block text-white hover:text-[#FFC107] py-2 transition-all duration-300 transform hover:translate-x-2"
-                           aria-label="Navigate to Process section">Process</a>
-                        <a href="#testimonials" 
-                           class="block text-white hover:text-[#FFC107] py-2 transition-all duration-300 transform hover:translate-x-2"
-                           aria-label="Navigate to Testimonials section">Testimonials</a>
-                        <a href="#eventdetails" 
-                           class="block text-white hover:text-[#FFC107] py-2 transition-all duration-300 transform hover:translate-x-2"
-                           aria-label="Navigate to Event Details section">Event Details</a>
-                        <button class="w-full bg-[#FFC107] text-black px-6 py-2 rounded-full font-semibold hover:bg-[#FFD700] transition-all duration-300 mt-4 transform hover:scale-105 hover:shadow-lg"
-                           onclick="window.location.href='https://book.stripe.com/dR600lcNr86b4uI3cc'"
-                           aria-label="Register for the event">
-                        Register Now
-                        </button>
-                     </div>
+                  <!-- Desktop Menu -->
+                  <nav class="hidden md:flex items-center space-x-8 justify-end flex-grow" aria-label="Desktop navigation">
+                     <a href="#hero" 
+                        class="text-white hover:text-[#FFC107] transition-all duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#FFC107] after:transition-all after:duration-300 hover:after:w-full"
+                        aria-label="Navigate to Home section">
+                        <span>Home</span>
+                     </a>
+                     <a href="#transformation" 
+                        class="text-white hover:text-[#FFC107] transition-all duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#FFC107] after:transition-all after:duration-300 hover:after:w-full"
+                        aria-label="Navigate to Process section">
+                        <span>Process</span>
+                     </a>
+                     <a href="#testimonials" 
+                        class="text-white hover:text-[#FFC107] transition-all duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#FFC107] after:transition-all after:duration-300 hover:after:w-full"
+                        aria-label="Navigate to Testimonials section">
+                        <span>Testimonials</span>
+                     </a>
+                     <a href="#eventdetails" 
+                        class="text-white hover:text-[#FFC107] transition-all duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#FFC107] after:transition-all after:duration-300 hover:after:w-full"
+                        aria-label="Navigate to Event Details section">
+                        <span>Event</span>
+                     </a>
+                     <a href="https://book.stripe.com/dR600lcNr86b4uI3cc" 
+                        class="bg-[#FFC107] text-black px-6 py-2 rounded-full font-semibold hover:bg-[#FFD700] transition-all duration-300 transform hover:scale-105 hover:shadow-lg animate-pulse"
+                        aria-label="Register for the event">
+                        <span>Register Now</span>
+                     </a>
+                  </nav>
+                  <!-- Mobile Menu Button -->
+                  <div class="menu-button-wrapper relative z-50 pr-4">
+                     <button id="menuBtn" class="inline-flex items-center md:hidden text-white p-2 transition-transform duration-300 hover:scale-110" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileMenu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                           <path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" class="transition-transform duration-300"></path>
+                           <path id="closeIcon" class="hidden transition-transform duration-300" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                     </button>
                   </div>
                </div>
-            </nav>
+               <!-- Mobile Menu -->
+               <div id="mobileMenu" 
+                  class="hidden md:hidden w-full transform transition-all duration-300 ease-in-out"
+                  aria-label="Mobile navigation">
+                  <div class="px-2 pt-2 pb-3 space-y-1">
+                     <a href="#hero" 
+                        class="block text-white hover:text-[#FFC107] py-2 transition-all duration-300 transform hover:translate-x-2"
+                        aria-label="Navigate to Home section">Home</a>
+                     <a href="#transformation" 
+                        class="block text-white hover:text-[#FFC107] py-2 transition-all duration-300 transform hover:translate-x-2"
+                        aria-label="Navigate to Process section">Process</a>
+                     <a href="#testimonials" 
+                        class="block text-white hover:text-[#FFC107] py-2 transition-all duration-300 transform hover:translate-x-2"
+                        aria-label="Navigate to Testimonials section">Testimonials</a>
+                     <a href="#eventdetails" 
+                        class="block text-white hover:text-[#FFC107] py-2 transition-all duration-300 transform hover:translate-x-2"
+                        aria-label="Navigate to Event Details section">Event Details</a>
+                     <button class="w-full bg-[#FFC107] text-black px-6 py-2 rounded-full font-semibold hover:bg-[#FFD700] transition-all duration-300 mt-4 transform hover:scale-105 hover:shadow-lg"
+                        onclick="window.location.href='https://book.stripe.com/dR600lcNr86b4uI3cc'"
+                        aria-label="Register for the event">
+                        Register Now
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </nav>
+         
             <script>
                const menuBtn = document.getElementById('menuBtn');
                const mobileMenu = document.getElementById('mobileMenu');
@@ -1119,12 +1120,12 @@
                       </svg>
                       <span class="text-white font-lato" id="el-wwfej2xf">Limited Spots Available</span>
                     </div>
-                    <div class="flex items-center gap-2 transition-all duration-300 hover:translate-x-2" id="el-1xmiizdj">
+                    <!-- <div class="flex items-center gap-2 transition-all duration-300 hover:translate-x-2" id="el-1xmiizdj">
                       <svg class="w-6 h-6 text-[#FFC107] animate-float" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="el-1tiky5ie">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" id="el-py2fhxi9"></path>
                       </svg>
                       <span class="text-white font-lato" id="el-s080myox">Money-Back Guarantee</span>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
                 <!-- Sticky Mobile CTA -->
