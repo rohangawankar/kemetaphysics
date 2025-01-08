@@ -36,6 +36,22 @@
 
           gtag('config', 'AW-1012127719');
         </script>
+        
+        <script>
+          function gtag_report_conversion(url) {
+            var callback = function () {
+              if (typeof(url) != 'undefined') {
+                window.location = url;
+              }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-1012127719/U0X0CPjkh4IaEOevz-ID',
+                'event_callback': callback
+            });
+            return false;
+          }
+          </script>
+          
 
       <!-- <script src="https://js.stripe.com/v3/"></script>
       <script src="/src/stripe.js"></script> -->
