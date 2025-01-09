@@ -1,1228 +1,906 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-      <script src="https://cdn.tailwindcss.com"></script>
-      <title>Soul Integration Accelerator</title>
-      <link rel="icon" type="image/png" href="src/img/logo.png">
-      <script>
-         document.title = "Soul Integration Accelerator";
-      </script>
-
-      <!-- Google tag (gtag.js) -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-CGWB9TZ51J"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-CGWB9TZ51J');
-      </script>
-      <!-- Google Tag Manager -->
-      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-TV55H4CZ');</script>
-      <!-- End Google Tag Manager -->
-       <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1012127719">
-        </script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'AW-1012127719');
-        </script>
-        
-        <script>
-          function gtag_report_conversion(url) {
-            var callback = function () {
-              if (typeof(url) != 'undefined') {
-                window.location = url;
-              }
-            };
-            gtag('event', 'conversion', {
-                'send_to': 'AW-1012127719/U0X0CPjkh4IaEOevz-ID',
-                'event_callback': callback
-            });
-            return false;
-          }
-          </script>
-          
-
-      <!-- <script src="https://js.stripe.com/v3/"></script>
-      <script src="/src/stripe.js"></script> -->
-      <script>
-         document.addEventListener('DOMContentLoaded', () => {
-             fetch('footer.html')
-                 .then(response => response.text())
-                 .then(data => {
-                     document.getElementById('footer-placeholder').innerHTML = data;
-                 })
-                 .catch(error => console.error('Error loading footer:', error));
-         });
-      </script>   
-      <script>
-         document.addEventListener('DOMContentLoaded', () => {
-         // A small helper function to attach the same logic to a given set of IDs
-         function setupVideoControls(playBtnId, thumbnailId, videoId) {
-            const playButton = document.getElementById(playBtnId);
-            const thumbnail = document.getElementById(thumbnailId);
-            const video = document.getElementById(videoId);
-         
-            // Only proceed if all elements exist (to avoid errors on pages without them)
-            if (playButton && thumbnail && video) {
-               // Handle Play Button Click
-               playButton.addEventListener('click', () => {
-               thumbnail.style.display = 'none'; 
-               playButton.style.display = 'none'; 
-               video.classList.remove('hidden'); 
-               video.play(); 
-               });
-         
-               // Handle Video Pause
-               video.addEventListener('pause', () => {
-               thumbnail.style.display = 'block'; 
-               playButton.style.display = 'flex'; 
-               video.classList.add('hidden'); 
-               });
-         
-               // Handle Video End
-               video.addEventListener('ended', () => {
-               thumbnail.style.display = 'block'; 
-               playButton.style.display = 'flex'; 
-               video.classList.add('hidden'); 
-               });
-            }
-         }
-         
-         // Apply the same logic to both desktop and mobile sets (if they exist)
-         setupVideoControls('play-button', 'video-thumbnail', 'video-element');
-         setupVideoControls('play-button-mobile', 'video-thumbnail-mobile', 'video-element-mobile');
-         });
-      </script>                 
-      <style>
-         /* In your global CSS (e.g., styles.css) */
-         html, body {
-         margin: 0;
-         padding: 0;
-         height: 100%;
-         background-color: #000;  /* or your black shade */
-         position: relative;
-         width: 100%;
-         /* overflow-x: hidden; */
-         }
-         
-         
-      </style>
-   </head>
-   <body class="m-0 p-0 bg-black">
-      <!-- Google Tag Manager (noscript) -->
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TV55H4CZ"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
-         
-      <section id="section-9ff77e38-8980-46c5-a393-bedbc334f65a">
-         <div id="root">
-          <nav id="navbar" class="fixed w-full bg-black/90 backdrop-blur-sm z-50 transition-all duration-300" role="navigation" aria-label="Main navigation">
-            <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-               <div class="flex items-center justify-between h-20">
-                  <!-- Logo -->
-                  <div class="flex-shrink-0">
-                     <a href="#hero" class="block transform hover:scale-105 transition-transform duration-300" aria-label="KCL Home">
-                        <img src="src/img/logo.png" 
-                           alt="KCL Logo" 
-                           class="w-20 sm:w-24 h-auto pt-4 transition-all duration-300 opacity-100 hover:opacity-90" 
-                           loading="lazy"
-                           width="96"
-                           height="96">
-                     </a>
-                  </div>
-                  <!-- Desktop Menu -->
-                  <nav class="hidden md:flex items-center space-x-8 justify-end flex-grow" aria-label="Desktop navigation">
-                     <a href="#hero" 
-                        class="text-white hover:text-[#FFC107] transition-all duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#FFC107] after:transition-all after:duration-300 hover:after:w-full"
-                        aria-label="Navigate to Home section">
-                        <span>Home</span>
-                     </a>
-                     <a href="#transformation" 
-                        class="text-white hover:text-[#FFC107] transition-all duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#FFC107] after:transition-all after:duration-300 hover:after:w-full"
-                        aria-label="Navigate to Process section">
-                        <span>Process</span>
-                     </a>
-                     <a href="#testimonials" 
-                        class="text-white hover:text-[#FFC107] transition-all duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#FFC107] after:transition-all after:duration-300 hover:after:w-full"
-                        aria-label="Navigate to Testimonials section">
-                        <span>Testimonials</span>
-                     </a>
-                     <a href="#eventdetails" 
-                        class="text-white hover:text-[#FFC107] transition-all duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#FFC107] after:transition-all after:duration-300 hover:after:w-full"
-                        aria-label="Navigate to Event Details section">
-                        <span>Event</span>
-                     </a>
-                     <a href="#testimonials" 
-                        class="bg-[#FFC107] text-black px-6 py-2 rounded-full font-semibold hover:bg-[#FFD700] transition-all duration-300 transform hover:scale-105 hover:shadow-lg animate-pulse"
-                        aria-label="Register for the event">
-                        <span>Register Now</span>
-                     </a>
-                  </nav>
-                  <!-- Mobile Menu Button -->
-                  <div class="menu-button-wrapper relative z-50 pr-4">
-                     <button id="menuBtn" class="inline-flex items-center md:hidden text-white p-2 transition-transform duration-300 hover:scale-110" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileMenu">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                           <path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" class="transition-transform duration-300"></path>
-                           <path id="closeIcon" class="hidden transition-transform duration-300" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
-                     </button>
-                  </div>
-               </div>
-               <!-- Mobile Menu -->
-               <div id="mobileMenu" 
-                  class="hidden md:hidden w-full transform transition-all duration-300 ease-in-out"
-                  aria-label="Mobile navigation">
-                  <div class="px-2 pt-2 pb-3 space-y-1">
-                     <a href="#hero" 
-                        class="block text-white hover:text-[#FFC107] py-2 transition-all duration-300 transform hover:translate-x-2"
-                        aria-label="Navigate to Home section">Home</a>
-                     <a href="#transformation" 
-                        class="block text-white hover:text-[#FFC107] py-2 transition-all duration-300 transform hover:translate-x-2"
-                        aria-label="Navigate to Process section">Process</a>
-                     <a href="#testimonials" 
-                        class="block text-white hover:text-[#FFC107] py-2 transition-all duration-300 transform hover:translate-x-2"
-                        aria-label="Navigate to Testimonials section">Testimonials</a>
-                     <a href="#eventdetails" 
-                        class="block text-white hover:text-[#FFC107] py-2 transition-all duration-300 transform hover:translate-x-2"
-                        aria-label="Navigate to Event Details section">Event Details</a>
-                     <button class="w-full bg-[#FFC107] text-black px-6 py-2 rounded-full font-semibold hover:bg-[#FFD700] transition-all duration-300 mt-4 transform hover:scale-105 hover:shadow-lg"
-                        onclick="window.location.href='#testimonials'"
-                        aria-label="Register for the event">
-                        Register Now
-                     </button>
-                  </div>
-               </div>
-            </div>
-         </nav>
-         
-            <script>
-               const menuBtn = document.getElementById('menuBtn');
-               const mobileMenu = document.getElementById('mobileMenu');
-               const menuIcon = document.getElementById('menuIcon');
-               const closeIcon = document.getElementById('closeIcon');
-               
-               // Add scroll-based navbar animation
-               let lastScroll = 0;
-               window.addEventListener('scroll', () => {
-                   const navbar = document.getElementById('navbar');
-                   const currentScroll = window.pageYOffset;
-                   
-                   if (currentScroll <= 0) {
-                       navbar.style.transform = 'translateY(0)';
-                       navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
-                   } else if (currentScroll > lastScroll) {
-                       navbar.style.transform = 'translateY(-100%)';
-                   } else {
-                       navbar.style.transform = 'translateY(0)';
-                       navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.95)';
-                   }
-                   lastScroll = currentScroll;
-               });
-               
-               menuBtn.addEventListener('click', () => {
-                   const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
-                   menuBtn.setAttribute('aria-expanded', !isExpanded);
-                   mobileMenu.classList.toggle('hidden');
-                   menuIcon.classList.toggle('hidden');
-                   closeIcon.classList.toggle('hidden');
-                   
-                   if (!mobileMenu.classList.contains('hidden')) {
-                       mobileMenu.style.transform = 'translateY(0)';
-                       mobileMenu.style.opacity = '1';
-                   } else {
-                       mobileMenu.style.transform = 'translateY(-20px)';
-                       mobileMenu.style.opacity = '0';
-                   }
-               });
-               
-               document.addEventListener('click', (e) => {
-                   if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
-                       mobileMenu.classList.add('hidden');
-                       menuIcon.classList.remove('hidden');
-                       closeIcon.classList.add('hidden');
-                       mobileMenu.style.transform = 'translateY(-20px)';
-                       mobileMenu.style.opacity = '0';
-                       menuBtn.setAttribute('aria-expanded', 'false');
-                   }
-               });
-               
-               document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                   anchor.addEventListener('click', function (e) {
-                       e.preventDefault();
-                       const target = document.querySelector(this.getAttribute('href'));
-                       if (target) {
-                           target.scrollIntoView({
-                               behavior: 'smooth',
-                               block: 'start'
-                           });
-                           // Update URL without page reload
-                           history.pushState(null, '', this.getAttribute('href'));
-                       }
-                   });
-               });
-            </script>
-         </div>
-      </section>
-      <!-- , -->
-      <section id="section-e12fab58-a178-480c-b000-1f897da7ec94">
-         <section id="hero" class="relative min-h-screen bg-black pt-20">
-            <div class="absolute inset-0">
-               <div class="bg-gradient-to-b from-black/50 to-black absolute inset-0"></div>
-            </div>
-            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-24 pb-16 w-full element-highlight">
-               <!-- Main content grid -->
-               <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                  <!-- Left column - Text content -->
-                  <div class="text-left space-y-6">
-                     <div class="animate__animated animate__fadeIn">
-                        <h1 class="text-[#FFD700] font-montserrat text-xl md:text-2xl element-highlight" contenteditable="false">
-                           Ready to Elevate Your Journey in 2025?
-                        </h1>
-                        <div class="w-24 h-0.5 bg-[#FFD700] mt-2"></div>
-                     </div>
-                     <div class="animate__animated animate__fadeIn animate__delay-1s">
-                        <h2 class="text-white font-playfair text-4xl md:text-6xl font-bold mb-4 element-highlight" itemprop="name">
-                           SOUL INTEGRATION ACCELERATOR
-                        </h2>
-                        <p class="text-[#FFD700] font-lato text-xl md:text-2xl">
-                           <span class="md:inline" itemprop="eventType">Live Virtual Workshop</span>
-                           <span class="hidden md:inline"> - </span>
-                           <span class="block md:inline" itemprop="startDate" content="2025-01-18T10:00:00-06:00">January 18, 10 AM CST</span>
-                        </p>
-                     </div>
-                     <!-- MOBILE-ONLY VIDEO (block on mobile, hidden on md and up) -->
-                     <div class="block md:hidden relative w-full aspect-video bg-gray-800 rounded-lg overflow-hidden">
-                        <!-- Thumbnail -->
-                        <img 
-                           src="./src/img/thumbnail3.png" 
-                           alt="Soul Integration Workshop Preview" 
-                           class="absolute inset-0 w-full h-full object-cover z-10 rounded-lg opacity-90" 
-                           loading="lazy" 
-                           id="video-thumbnail-mobile"
-                           >
-                        <!-- Play Button -->
-                        <div 
-                        id="play-button-mobile" 
-                        class="absolute inset-0 flex items-center justify-center z-20 cursor-pointer"
-                    >
-                        <div class="w-20 h-20 rounded-full bg-red-600 flex items-center justify-center hover:bg-red-700 transition-all duration-300 hover:scale-110 shadow-xl">
-                            <svg 
-                                class="w-12 h-12 text-white ml-1" 
-                                fill="currentColor" 
-                                viewBox="0 0 24 24" 
-                                aria-label="Play video"
-                            >
-                                <path d="M8 5v14l11-7z"></path>
-                            </svg>
-                        </div>
-                        <span class="absolute -bottom-8 text-white text-sm font-medium">Watch Demo</span>
-                    </div>
-                        <!-- Video -->
-                        <video 
-                           class="absolute inset-0 w-full h-full object-cover rounded-lg hidden" 
-                           id="video-element-mobile" 
-                           controls 
-                           playsinline
-                           >
-                           <source src="./src/video/soul_integration.mp4" type="video/mp4">
-                           Your browser does not support the video tag.
-                        </video>
-                     </div>
-                     <!-- END MOBILE-ONLY VIDEO -->
-                     <!-- <div class="mt-12 animate__animated animate__fadeIn animate__delay-2s element-highlight">
-                        <button class="bg-[#FFD700] text-black px-8 py-4 rounded-full text-xl font-bold hover:bg-[#FFF176] transition-colors duration-300 animate__animated animate__pulse animate__infinite w-full md:w-auto" onclick="window.location.href='https://book.stripe.com/dR600lcNr86b4uI3cc'" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                           <meta itemprop="price" content="25.00">
-                           <meta itemprop="priceCurrency" content="USD">
-                           SECURE YOUR SPOT - $25
-                        </button>
-                        <p class="text-white/80 mt-2">Usually $99 - Save 75% Today</p>
-                        </div>
-                        <div class="flex flex-col md:flex-row gap-4 md:gap-8 mt-8">
-                        <div class="text-white flex items-center gap-2">
-                           <svg class="w-6 h-6 text-[#FFD700]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                           </svg>
-                           <span>Live Interactive Session</span>
-                        </div>
-                        <div class="text-white flex items-center gap-2">
-                           <svg class="w-6 h-6 text-[#FFD700]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                           </svg>
-                           <span>100% Satisfaction</span>
-                        </div>
-                        <div class="text-white flex items-center gap-2">
-                           <svg class="w-6 h-6 text-[#FFD700]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                           </svg>
-                           <span>Secure Checkout</span>
-                        </div>
-                        </div> -->
-                     <!-- Wrapper with text-center on mobile, text-left on md+ -->
-                     <div class="flex flex-col md:flex-row  items-center gap-4 mt-12">
-                      <button 
-                      class="bg-transparent border-2 border-[#FFD700] text-[#FFD700] px-8 py-4 rounded-full text-xl font-bold hover:bg-[#FFD700] hover:text-black transition-colors duration-300 w-full md:w-auto"
-                      onclick="window.location.href='masterclass.html'"
-                  >
-                      LEARN MORE
-                  </button>
-                      <button 
-                          class="bg-[#FFD700] text-black px-8 py-4 rounded-full text-xl font-bold hover:bg-[#FFF176] transition-colors duration-300 animate__animated animate__pulse animate__infinite w-full md:w-auto"
-                          onclick="window.location.href='#testimonials'"
-                          itemprop="offers"
-                          itemscope
-                          itemtype="http://schema.org/Offer"
-                      >
-                          <meta itemprop="price" content="25.00" />
-                          <meta itemprop="priceCurrency" content="USD" />
-                          RESERVE SEAT
-                      </button>
-                  </div>
-                     <!-- Bullet points container: stack and center on mobile, row on md+ -->
-                     <div
-                        class="flex flex-col items-center md:items-start md:flex-row gap-4 md:gap-8 mt-8"
-                        >
-                        <div class="text-white flex items-center gap-2">
-                           <svg
-                              class="w-6 h-6 text-[#FFD700]"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              aria-hidden="true"
-                              >
-                              <path
-                                 stroke-linecap="round"
-                                 stroke-linejoin="round"
-                                 stroke-width="2"
-                                 d="M5 13l4 4L19 7"
-                                 ></path>
-                           </svg>
-                           <span>Live Interactive Session</span>
-                        </div>
-                        <div class="text-white flex items-center gap-2">
-                           <svg
-                              class="w-6 h-6 text-[#FFD700]"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              aria-hidden="true"
-                              >
-                              <path
-                                 stroke-linecap="round"
-                                 stroke-linejoin="round"
-                                 stroke-width="2"
-                                 d="M5 13l4 4L19 7"
-                                 ></path>
-                           </svg>
-                           <span>100% Satisfaction</span>
-                        </div>
-                        <div class="text-white flex items-center gap-2">
-                           <svg
-                              class="w-6 h-6 text-[#FFD700]"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              aria-hidden="true"
-                              >
-                              <path
-                                 stroke-linecap="round"
-                                 stroke-linejoin="round"
-                                 stroke-width="2"
-                                 d="M5 13l4 4L19 7"
-                                 ></path>
-                           </svg>
-                           <span>Secure Checkout</span>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- Right column - Video placeholder (hidden on mobile) -->
-                  <div class="hidden md:block relative w-full aspect-video bg-gray-800 rounded-lg overflow-hidden">
-                     <!-- Thumbnail -->
-                     <img 
-                        src="./src/img/thumbnail3.png" 
-                        alt="Soul Integration Workshop Preview" 
-                        class="absolute inset-0 w-full h-full object-cover z-10 rounded-lg opacity-90" 
-                        loading="lazy" 
-                        id="video-thumbnail"
-                        >
-                     <!-- Play Button -->
-                     <div 
-                     id="play-button" 
-                     class="absolute inset-0 flex items-center justify-center z-20 cursor-pointer"
-                 >
-                     <div class="w-20 h-20 rounded-full bg-red-600 flex items-center justify-center hover:bg-red-700 transition-all duration-300 hover:scale-110 shadow-xl">
-                         <svg 
-                             class="w-12 h-12 text-white ml-1" 
-                             fill="currentColor" 
-                             viewBox="0 0 24 24" 
-                             aria-label="Play video"
-                         >
-                             <path d="M8 5v14l11-7z"></path>
-                         </svg>
-                     </div>
-                     <span class="absolute -bottom-8 text-white text-sm font-medium">Watch Demo</span>
-                 </div>
-                     <!-- Video -->
-                     <video 
-                        class="absolute inset-0 w-full h-full object-cover rounded-lg hidden" 
-                        id="video-element" 
-                        controls 
-                        playsinline
-                        >
-                        <source src="./src/video/soul_integration.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                     </video>
-                  </div>
-               </div>
-               <!-- Countdown Timer Section -->
-               <div class="mt-12 animate__animated animate__fadeIn element-highlight flex flex-col items-center">
-                  <h3 class="text-[#FFD700] font-montserrat text-2xl mb-4 text-center">Time Remaining Until the Event</h3>
-                  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto w-full">
-                     <div class="bg-black/30 p-4 rounded-lg border border-[#FFD700]/30 text-center">
-                        <div class="text-[#FFD700] text-3xl md:text-4xl font-bold" id="days">13</div>
-                        <div class="text-white/80 text-sm">Days</div>
-                     </div>
-                     <div class="bg-black/30 p-4 rounded-lg border border-[#FFD700]/30 text-center">
-                        <div class="text-[#FFD700] text-3xl md:text-4xl font-bold" id="hours">17</div>
-                        <div class="text-white/80 text-sm">Hours</div>
-                     </div>
-                     <div class="bg-black/30 p-4 rounded-lg border border-[#FFD700]/30 text-center">
-                        <div class="text-[#FFD700] text-3xl md:text-4xl font-bold" id="minutes">46</div>
-                        <div class="text-white/80 text-sm">Minutes</div>
-                     </div>
-                     <div class="bg-black/30 p-4 rounded-lg border border-[#FFD700]/30 text-center">
-                        <div class="text-[#FFD700] text-3xl md:text-4xl font-bold" id="seconds">42</div>
-                        <div class="text-white/80 text-sm">Seconds</div>
-                     </div>
-                  </div>
-               </div>
-               <script>
-                  // Set the date we're counting down to
-                  const countDownDate = new Date("Jan 18, 2025 10:00:00 CST").getTime();
-                  
-                  // Update the countdown every 1 second
-                  const x = setInterval(function() {
-                      const now = new Date().getTime();
-                      const distance = countDownDate - now;
-                  
-                      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                  
-                      document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
-                      document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
-                      document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
-                      document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
-                  
-                      if (distance < 0) {
-                          clearInterval(x);
-                          document.getElementById("days").innerHTML = "00";
-                          document.getElementById("hours").innerHTML = "00";
-                          document.getElementById("minutes").innerHTML = "00";
-                          document.getElementById("seconds").innerHTML = "00";
-                      }
-                  }, 1000);
-               </script>
-               <!-- Meta tags for SEO -->
-               <meta name="description" content="Join our Soul Integration Accelerator - a transformative live virtual workshop on January 18, 2025. Learn powerful techniques for personal growth and spiritual development. Special offer: $25 (75% off)">
-               <meta name="keywords" content="soul integration, spiritual workshop, personal development, virtual workshop, spiritual growth, meditation, mindfulness">
-               <meta property="og:title" content="Soul Integration Accelerator - Live Virtual Workshop">
-               <meta property="og:description" content="Transform your life with our Soul Integration Accelerator workshop. Join us live on January 18, 2025. Limited time offer: $25">
-               <meta property="og:type" content="website">
-               <meta property="og:image" content="[Your Workshop Image URL]">
-               <meta name="twitter:card" content="summary_large_image">
-               <meta name="twitter:title" content="Soul Integration Accelerator Workshop">
-               <meta name="twitter:description" content="Join our transformative live virtual workshop on January 18, 2025. Special price: $25">
-            </div>
-         </section>
-      </section>
-      <!-- , -->
-      <section id="section-fafc0e2f-6a6e-48ca-a9d8-1369be086dc6">
-         <section id="transformation" class="py-20 bg-gradient-to-b from-black to-neutral-900 overflow-hidden" aria-labelledby="transformation-title">
-            <div class="w-full px-4 sm:px-6 lg:px-8">
-              <!-- Title Section with Enhanced Scroll Animation -->
-              <div class="text-center mb-16 opacity-0 translate-y-10" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true" data-aos-easing="ease-out-cubic">
-                <h2 id="transformation-title" class="text-white font-montserrat text-4xl md:text-5xl font-bold mb-4">
-                  The Soul Integration Process
-                </h2>
-                <meta name="description" content="Discover our transformative Soul Integration Process: Elevate, Heal, Activate, and Manifest your spiritual journey">
-                <div class="w-32 h-1 bg-[#FFC107] mx-auto transform origin-left" data-aos="scale-x-100" data-aos-delay="300" role="presentation"></div>
-              </div>
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8" role="list">
-                <!-- ELEVATE -->
-                <article class="group bg-black/50 p-6 md:p-8 rounded-lg border border-[#FFC107]/20 hover:border-[#FFC107] transition-all duration-500 opacity-0 hover:bg-black/70" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" data-aos-once="true" data-aos-easing="ease-out-cubic">
-                  <div class="flex justify-center mb-4 md:mb-6">
-                    <svg class="w-12 h-12 md:w-16 md:h-16 text-[#FFC107] transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" role="img">
-                      <path d="M12 2L2 22h20L12 2z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                  </div>
-                  <h3 class="text-white font-montserrat text-xl md:text-2xl font-bold mb-3 md:mb-4 text-center transform group-hover:translate-y-[-2px] transition-transform duration-300">ELEVATE</h3>
-                  <p class="text-white/80 text-center font-lato text-sm md:text-base transform group-hover:translate-y-[-2px] transition-transform duration-300">Gain self-awareness and transcend limiting beliefs</p>
-                </article>
-                <!-- HEAL -->
-                <article class="group bg-black/50 p-6 md:p-8 rounded-lg border border-[#FFC107]/20 hover:border-[#FFC107] transition-all duration-500 opacity-0 hover:bg-black/70" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true" data-aos-easing="ease-out-cubic">
-                  <div class="flex justify-center mb-4 md:mb-6">
-                    <svg class="w-12 h-12 md:w-16 md:h-16 text-[#FFC107] transform group-hover:scale-110 group-hover:rotate-180 transition-all duration-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" role="img">
-                      <circle cx="12" cy="12" r="10" stroke-width="2"></circle>
-                      <circle cx="12" cy="12" r="5" stroke-width="2"></circle>
-                    </svg>
-                  </div>
-                  <h3 class="text-white font-montserrat text-xl md:text-2xl font-bold mb-3 md:mb-4 text-center transform group-hover:translate-y-[-2px] transition-transform duration-300">HEAL</h3>
-                  <p class="text-white/80 text-center font-lato text-sm md:text-base transform group-hover:translate-y-[-2px] transition-transform duration-300">Address emotional wounds and release blockages</p>
-                </article>
-                <!-- ACTIVATE -->
-                <article class="group bg-black/50 p-6 md:p-8 rounded-lg border border-[#FFC107]/20 hover:border-[#FFC107] transition-all duration-500 opacity-0 hover:bg-black/70" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-once="true" data-aos-easing="ease-out-cubic">
-                  <div class="flex justify-center mb-4 md:mb-6">
-                    <svg class="w-12 h-12 md:w-16 md:h-16 text-[#FFC107] transform group-hover:scale-110 group-hover:rotate-45 transition-all duration-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" role="img">
-                      <path d="M12 2v20M2 12h20M4 4l16 16M4 20L20 4" stroke-width="2"></path>
-                    </svg>
-                  </div>
-                  <h3 class="text-white font-montserrat text-xl md:text-2xl font-bold mb-3 md:mb-4 text-center transform group-hover:translate-y-[-2px] transition-transform duration-300">ACTIVATE</h3>
-                  <p class="text-white/80 text-center font-lato text-sm md:text-base transform group-hover:translate-y-[-2px] transition-transform duration-300">Connect with your higher self for clarity and intuition</p>
-                </article>
-                <!-- MANIFEST -->
-                <article class="group bg-black/50 p-6 md:p-8 rounded-lg border border-[#FFC107]/20 hover:border-[#FFC107] transition-all duration-500 opacity-0 hover:bg-black/70" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" data-aos-once="true" data-aos-easing="ease-out-cubic">
-                  <div class="flex justify-center mb-4 md:mb-6">
-                    <svg class="w-12 h-12 md:w-16 md:h-16 text-[#FFC107] transform group-hover:scale-110 group-hover:rotate-[-12deg] transition-all duration-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" role="img">
-                      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke-width="2"></path>
-                    </svg>
-                  </div>
-                  <h3 class="text-white font-montserrat text-xl md:text-2xl font-bold mb-3 md:mb-4 text-center transform group-hover:translate-y-[-2px] transition-transform duration-300">MANIFEST</h3>
-                  <p class="text-white/80 text-center font-lato text-sm md:text-base transform group-hover:translate-y-[-2px] transition-transform duration-300">Turn insights into actionable results and a fulfilling life</p>
-                </article>
-              </div>
-            </div>
-          </section>
-          
-         <!-- Add AOS (Animate On Scroll) Library CSS and JS -->
-         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-         <script>
-            AOS.init({
-              offset: 80,
-              duration: 1000,
-              easing: 'ease-out-cubic',
-              delay: 100,
-              once: false, // Allow animations to re-trigger
-              mirror: true, // Animate in reverse on scroll up
-              anchorPlacement: 'top-bottom',
-            });
-            
-            // Refresh AOS on page load or dynamic layout changes
-            window.addEventListener('load', () => {
-              AOS.refresh();
-            });
-         </script>
-      </section>
-      <!-- , -->
-      <section id="section-1f056395-dbda-43d7-ba20-8cf2b5f34bb6">
-        <section id="testimonials" class="py-20 bg-white opacity-0 transition-opacity duration-1000 ease-in-out w-full is-visible" data-scroll-section="">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="el-fogca7dl">
-            <div class="text-center mb-16 opacity-0 transform translate-y-10 transition-all duration-1000 ease-out is-visible" data-scroll="" data-scroll-speed="1" id="el-zb8tk8xt">
-              <h2 class="text-black font-montserrat text-3xl md:text-4xl lg:text-5xl font-bold mb-4 px-2 animate-fade-in" id="el-phauvdvr">
-                TRANSFORMATIONAL RESULTS
-              </h2>
-              <div class="w-48 h-1 bg-[#FFC107] mx-auto transform origin-left scale-x-0 transition-transform duration-1000 ease-out" id="el-a15tq7cu"></div>
-            </div>
-            <div class="relative w-full" id="testimonials-wrapper">
-              <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-6 scroll-smooth gap-6" style="-webkit-overflow-scrolling: touch;" id="testimonials-container">
-                <!-- First testimonial - appears first on mobile, second on desktop -->
-                <div class="flex-shrink-0 w-full md:w-1/3 snap-center testimonial-card order-first md:order-2">
-                  <div class="bg-black p-6 rounded-lg border border-[#FFC107]/20 hover:shadow-lg transition-all duration-300">
-                    <p class="text-white text-base italic mb-4">"I did my research on a lot of things you talked about, and you are correct in everything you said. That means a lot today. People have been lied to and misled in many things and places. Finding good, honest people is problematic because some will say one thing and mean another. Thank you for your integrity, honesty, and willingness to put everything on the line for people. I hope all those reading this will agree that Reginald is a man who deserves respect and more for the things I mentioned. You worked hard and earned this respect. That is what you are about. Thank you from the bottom of my heart."</p>
-                    <p class="text-[#FFC107] font-bold">Dr. Dave Patrick Lavigne</p>
-                  </div>
-                </div>
-                <!-- Second testimonial - appears second on mobile, first on desktop -->
-                <div class="flex-shrink-0 w-full md:w-1/3 snap-center testimonial-card order-2 md:order-1">
-                  <div class="bg-black p-6 rounded-lg border border-[#FFC107]/20 hover:shadow-lg transition-all duration-300">
-                    <p class="text-white text-base italic mb-4">
-                      "Your ability to break down complex ideas into simple and relatable truths is unmatched. You've helped me see things from a new perspective, and it has truly transformed the way I approach life. Thank you for your wisdom and kindness."
-                    </p>
-                    <p class="text-[#FFC107] font-bold">@jennifer_a</p>
-                  </div>
-                </div>
-                <!-- Rest of testimonials with default ordering -->
-                <div class="flex-shrink-0 w-full md:w-1/3 snap-center testimonial-card order-3">
-                  <div class="bg-black p-6 rounded-lg border border-[#FFC107]/20 hover:shadow-lg transition-all duration-300">
-                    <p class="text-white text-base italic mb-4">
-                      "I've been following your work for a while now, and every time I learn something new. You have a way of connecting the dots that no one else does. I feel so much more empowered and informed. Thank you for being a guiding light!"
-                    </p>
-                    <p class="text-[#FFC107] font-bold">@matthewc_1990</p>
-                  </div>
-                </div>
-                <div class="flex-shrink-0 w-full md:w-1/3 snap-center testimonial-card order-4">
-                  <div class="bg-black p-6 rounded-lg border border-[#FFC107]/20 hover:shadow-lg transition-all duration-300">
-                    <p class="text-white text-base italic mb-4">
-                      "Your authenticity and passion shine through in everything you do. It's refreshing to find someone who genuinely cares about making a difference. I can't thank you enough for the clarity and hope you've brought into my life."
-                    </p>
-                    <p class="text-[#FFC107] font-bold">@sarah_freedom</p>
-                  </div>
-                </div>
-                <div class="flex-shrink-0 w-full md:w-1/3 snap-center testimonial-card order-5">
-                  <div class="bg-black p-6 rounded-lg border border-[#FFC107]/20 hover:shadow-lg transition-all duration-300">
-                    <p class="text-white text-base italic mb-4">
-                      "Thank you for challenging my beliefs and encouraging me to think critically. You've opened my eyes to truths I didn't know I needed, and it's been an incredible journey of self-discovery and growth. Keep up the amazing work!"
-                    </p>
-                    <p class="text-[#FFC107] font-bold">@truthseeker89</p>
-                  </div>
-                </div>
-                <div class="flex-shrink-0 w-full md:w-1/3 snap-center testimonial-card order-6">
-                  <div class="bg-black p-6 rounded-lg border border-[#FFC107]/20 hover:shadow-lg transition-all duration-300">
-                    <p class="text-white text-base italic mb-4">
-                      "I can't express how much your insights have meant to me. They've given me strength during some of the toughest moments in my life. Your dedication to helping others is truly inspiring. Thank you for being such a positive force!"
-                    </p>
-                    <p class="text-[#FFC107] font-bold">@angelica_r</p>
-                  </div>
-                </div>
-                <div class="flex-shrink-0 w-full md:w-1/3 snap-center testimonial-card order-7">
-                  <div class="bg-black p-6 rounded-lg border border-[#FFC107]/20 hover:shadow-lg transition-all duration-300">
-                    <p class="text-white text-base italic mb-4">
-                      "I was at a crossroads in life, and your words gave me the courage to take the right path. Your wisdom and compassion have had a profound impact on me. Thank you for being a source of inspiration and guidance."
-                    </p>
-                    <p class="text-[#FFC107] font-bold">@lifejourney_kate</p>
-                  </div>
-                </div>
-                <div class="flex-shrink-0 w-full md:w-1/3 snap-center testimonial-card order-8">
-                  <div class="bg-black p-6 rounded-lg border border-[#FFC107]/20 hover:shadow-lg transition-all duration-300">
-                    <p class="text-white text-base italic mb-4">
-                      "Your honesty and vulnerability make you so relatable. You've made me realize that it's okay to question things and seek the truth. Thank you for being such a genuine and insightful voice in today's world."
-                    </p>
-                    <p class="text-[#FFC107] font-bold">@truthandclarity</p>
-                  </div>
-                </div>
-                <div class="flex-shrink-0 w-full md:w-1/3 snap-center testimonial-card order-9">
-                  <div class="bg-black p-6 rounded-lg border border-[#FFC107]/20 hover:shadow-lg transition-all duration-300">
-                    <p class="text-white text-base italic mb-4">
-                      "I didn't know how much I needed to hear your message until I did. Your perspective is both refreshing and thought-provoking. Thank you for challenging me to grow and see the world through a different lens."
-                    </p>
-                    <p class="text-[#FFC107] font-bold">@openmind_jason</p>
-                  </div>
-                </div>
-                <div class="flex-shrink-0 w-full md:w-1/3 snap-center testimonial-card order-10">
-                  <div class="bg-black p-6 rounded-lg border border-[#FFC107]/20 hover:shadow-lg transition-all duration-300">
-                    <p class="text-white text-base italic mb-4">
-                      "It's rare to find someone who speaks with such conviction and integrity. Your insights have not only educated me but also inspired me to share what I've learned with others. Thank you for being a beacon of truth and understanding."
-                    </p>
-                    <p class="text-[#FFC107] font-bold">@truthmatters2023</p>
-                  </div>
-                </div>
-              </div>
-              <!-- Navigation buttons -->
-              <button class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 focus:outline-none" aria-label="Previous Testimonials" id="prev-testimonial">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <button class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 focus:outline-none" aria-label="Next Testimonials" id="next-testimonial">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </section>
-       
-         <style>
-           /* Base Animation Classes */
-           @keyframes fadeIn {
-             from { opacity: 0; transform: translateY(20px); }
-             to { opacity: 1; transform: translateY(0); }
-           }
-           @keyframes scaleIn {
-             from { transform: scaleX(0); }
-             to { transform: scaleX(1); }
-           }
-           /* Intersection Observer Animations */
-           [data-scroll-section] {
-             opacity: 0;
-             transition: opacity 1000ms ease-out;
-           }
-           [data-scroll] {
-             opacity: 0;
-             transform: translateY(20px);
-             transition: all 1000ms ease-out;
-           }
-           /* Visible State Animations */
-           [data-scroll-section].is-visible {
-             opacity: 1;
-           }
-           [data-scroll].is-visible {
-             opacity: 1;
-             transform: translateY(0);
-           }
-           /* Title Underline Animation */
-           [data-scroll].is-visible .bg-\#FFC107 {
-             animation: scaleIn 1000ms ease-out forwards;
-           }
-           /* Testimonial Card Hover Effects */
-           .testimonial-card {
-             transition: all 300ms ease-out;
-           }
-           .testimonial-card:hover {
-             transform: translateY(-8px);
-             box-shadow: 0 10px 30px rgba(255, 193, 7, 0.2);
-           }
-           /* Smooth Scrolling */
-           .scroll-smooth {
-             scroll-behavior: smooth;
-           }
-           /* Custom Scrollbar Hide */
-           .scrollbar-hide::-webkit-scrollbar {
-             display: none;
-           }
-           .scrollbar-hide {
-             -ms-overflow-style: none;
-             scrollbar-width: none;
-           }
-         </style>
-         <script>
-            document.addEventListener('DOMContentLoaded', () => {
-            // Enhanced Intersection Observer
-            const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-               if (entry.isIntersecting) {
-                  entry.target.classList.add('is-visible');
-                  // Add staggered delay for child elements
-                  const children = entry.target.querySelectorAll('[data-scroll]');
-                  children.forEach((child, index) => {
-                  setTimeout(() => {
-                     child.classList.add('is-visible');
-                  }, index * 200); // 200ms stagger between each child
-                  });
-               }
-            });
-            }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -10% 0px'
-            });
-
-            // Observe elements
-            document.querySelectorAll('[data-scroll], [data-scroll-section]').forEach(el => observer.observe(el));
-
-            // Smooth Scroll Navigation with Buttons
-            const scrollContainer = document.getElementById('testimonials-container');
-            const prevButton = document.getElementById('prev-testimonial');
-            const nextButton = document.getElementById('next-testimonial');
-            const cardWidth = scrollContainer.querySelector('.testimonial-card').offsetWidth + 24; // Assuming 24px space-x-6
-
-            prevButton?.addEventListener('click', () => {
-            scrollContainer.scrollBy({
-               left: -cardWidth,
-               behavior: 'smooth'
-            });
-            });
-
-            nextButton?.addEventListener('click', () => {
-            scrollContainer.scrollBy({
-               left: cardWidth,
-               behavior: 'smooth'
-            });
-            });
-
-            // Update button visibility based on scroll position
-            const updateButtonVisibility = () => {
-            const isAtStart = scrollContainer.scrollLeft <= 0;
-            const isAtEnd = scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth;
-
-            prevButton.style.visibility = isAtStart ? 'hidden' : 'visible';
-            nextButton.style.visibility = isAtEnd ? 'hidden' : 'visible';
-            };
-
-            scrollContainer.addEventListener('scroll', updateButtonVisibility);
-            updateButtonVisibility(); // Initial check
-         });
-      </script>
-      </section>
-      <!-- , -->
-      <section id="section-a402bb83-23e9-417b-a0e6-560c453a0eb7">
-        <section id="eventdetails" class="py-20 bg-white">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Title -->
-            <div class="text-center mb-16">
-              <h2 class="text-black font-montserrat text-4xl md:text-5xl font-bold mb-4">
-                YOUR TRANSFORMATION JOURNEY
-              </h2>
-              <div class="w-48 h-1 bg-[#FFC107] mx-auto"></div>
-            </div>
-            
-            <div class="relative">
-              <!-- Timeline Connector -->
-              <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#FFC107]"></div>
-              
-              <!-- Timeline Items -->
-              <div class="space-y-12">
-                <!-- 10:00 AM - Introduction -->
-                <div class="relative flex flex-col md:flex-row md:items-center md:justify-around">
-                  <div class="w-full md:w-5/12 bg-black p-6 rounded-lg border border-[#FFC107] hover:shadow-lg transition-all duration-300">
-                    <h3 class="text-[#FFC107] font-montserrat text-xl font-bold mb-2">10:00 AM - Introduction</h3>
-                    <ul class="text-white font-lato space-y-2">
-                      <li><span class="text-[#FFC107] mr-2">•</span>Welcome participants with acknowledgment and objectives.</li>
-                      <li><span class="text-[#FFC107] mr-2">•</span>Reginald's Story: Transitioning from Christian guilt to Kemetic empowerment.</li>
-                      <li><span class="text-[#FFC107] mr-2">•</span>Overview of the webinar journey: Awareness → Understanding → Empowerment.</li>
-                    </ul>
-                  </div>
-                </div>
-        
-                <!-- 10:30 AM - Religious Residue -->
-                <div class="relative flex flex-col md:flex-row md:items-center md:justify-around">
-                  <div class="w-full md:w-5/12 bg-black p-6 rounded-lg border border-[#FFC107] hover:shadow-lg transition-all duration-300 md:ml-auto">
-                    <h3 class="text-[#FFC107] font-montserrat text-xl font-bold mb-2">10:30 AM - Religious Residue and Impact From Original Sin</h3>
-                    <ul class="text-white font-lato space-y-2">
-                      <li><span class="text-[#FFC107] mr-2">•</span>Uncovering Hidden Impact of a core belief of "I am a born sinner."</li>
-                      <li><span class="text-[#FFC107] mr-2">•</span>Exploring how Christian doctrines suppress authenticity and empowered living.</li>
-                      <li><span class="text-[#FFC107] mr-2">•</span>Exercises for identifying hidden negative programming.</li>
-                    </ul>
-                  </div>
-                </div>
-        
-                <!-- 11:00 AM - Letting Go -->
-                <div class="relative flex flex-col md:flex-row md:items-center md:justify-around">
-                  <div class="w-full md:w-5/12 bg-black p-6 rounded-lg border border-[#FFC107] hover:shadow-lg transition-all duration-300">
-                    <h3 class="text-[#FFC107] font-montserrat text-xl font-bold mb-2">11:00 AM - Why Letting Go of Religion Feels Impossible</h3>
-                    <ul class="text-white font-lato space-y-2">
-                      <li><span class="text-[#FFC107] mr-2">•</span>Emotional Bonds: How beliefs shape identity and keep you tethered.</li>
-                      <li><span class="text-[#FFC107] mr-2">•</span>Fear of Punishment: Uncover the roots of divine fear and loss.</li>
-                      <li><span class="text-[#FFC107] mr-2">•</span>From Guilt to Power: A personal story of breaking free and reclaiming strength.</li>
-                    </ul>
-                  </div>
-                </div>
-        
-                <!-- 11:30 AM - Kemetic Framework -->
-                <div class="relative flex flex-col md:flex-row md:items-center md:justify-around">
-                  <div class="w-full md:w-5/12 bg-black p-6 rounded-lg border border-[#FFC107] hover:shadow-lg transition-all duration-300 md:ml-auto">
-                    <h3 class="text-[#FFC107] font-montserrat text-xl font-bold mb-2">11:30 AM - Kemetic Framework and Tools for Balanced Living</h3>
-                    <ul class="text-white font-lato space-y-2">
-                      <li><span class="text-[#FFC107] mr-2">•</span>Core Principles Uncovered: How truth, reciprocity, and harmony transform daily life.</li>
-                      <li><span class="text-[#FFC107] mr-2">•</span>Simple Daily Practices: Align thoughts, emotions, and actions for inner peace.</li>
-                      <li><span class="text-[#FFC107] mr-2">•</span>Break Free from Limiting Beliefs: A powerful reframing tool for personal growth.</li>
-                    </ul>
-                  </div>
-                </div>
-        
-                <!-- 12:00 PM - Closing -->
-                <div class="relative flex flex-col md:flex-row md:items-center md:justify-around">
-                  <div class="w-full md:w-5/12 bg-black p-6 rounded-lg border border-[#FFC107] hover:shadow-lg transition-all duration-300">
-                    <h3 class="text-[#FFC107] font-montserrat text-xl font-bold mb-2">12:00 PM - Closing</h3>
-                    <ul class="text-white font-lato space-y-2">
-                      <li><span class="text-[#FFC107] mr-2">•</span>Key takeaways: Shifting from guilt to empowerment.</li>
-                      <li><span class="text-[#FFC107] mr-2">•</span>Invitation to continue the transformational journey.</li>
-                      <li><span class="text-[#FFC107] mr-2">•</span>Empowering affirmation: "You are divine and always have been."</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-      </section>
-      <!-- , -->
-      <section id="section-b738c536-db6e-4954-a41f-d50f35b0afd3">
-        <section id="valueproposition" class="py-20 bg-black">
-          <div class="w-full px-4 sm:px-6 lg:px-8">
-            <!-- Title Section -->
-            <div class="text-center mb-16">
-              <h1 class="text-white font-montserrat text-4xl md:text-5xl font-bold mb-4">
-                Benefits of Live Soul Integration Sessions
-              </h1>
-              <div class="w-32 h-1 bg-[#FFC107] mx-auto"></div>
-            </div>
-            
-            <div class="flex flex-col md:grid md:grid-cols-2 gap-8 max-w-4xl mx-auto" itemscope itemtype="http://schema.org/Product">
-              <!-- Pre-Recorded Column -->
-              <div class="space-y-6 w-full">
-                <div class="text-center mb-8">
-                  <h2 class="text-white font-montserrat text-2xl font-bold mb-2">Pre-Recorded Courses</h2>
-                  <div class="w-16 h-0.5 bg-[#FFC107]/50 mx-auto"></div>
-                </div>
-                <div class="bg-neutral-900 p-6 rounded-lg border border-[#FFC107]/20 w-full">
-                  <p class="text-white/80 font-lato text-center" itemprop="description">Self-Paced Learning with Minimal Interaction</p>
-                </div>
-                <div class="bg-neutral-900 p-6 rounded-lg border border-[#FFC107]/20 w-full">
-                  <p class="text-white/80 font-lato text-center" itemprop="description">Pre-set Content Without Personalization</p>
-                </div>
-                <div class="bg-neutral-900 p-6 rounded-lg border border-[#FFC107]/20 w-full">
-                  <p class="text-white/80 font-lato text-center" itemprop="description">No Real-Time Feedback or Group Dynamics</p>
-                </div>
-                <div class="bg-neutral-900 p-6 rounded-lg border border-[#FFC107]/20 w-full">
-                  <p class="text-white/80 font-lato text-center">
-                    <span itemprop="price">99</span>
-                    <meta itemprop="priceCurrency" content="USD">
-                    + Investment
-                  </p>
-                </div>
-              </div>
-        
-              <!-- Live Session Column -->
-              <div class="space-y-6 w-full" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                <div class="text-center mb-8">
-                  <h2 class="text-[#FFC107] font-montserrat text-2xl font-bold mb-2" itemprop="name">Soul Integration Accelerator</h2>
-                  <div class="w-16 h-0.5 bg-[#FFC107] mx-auto"></div>
-                </div>
-                <div class="bg-neutral-900 p-6 rounded-lg border border-[#FFC107] w-full hover:-translate-y-0.5 transition-transform duration-200">
-                  <p class="text-white font-lato text-center" itemprop="description">Real-Time Insights and Customized Guidance</p>
-                </div>
-                <div class="bg-neutral-900 p-6 rounded-lg border border-[#FFC107] w-full hover:-translate-y-0.5 transition-transform duration-200">
-                  <p class="text-white font-lato text-center" itemprop="description">Engaging Live Q&A and Support</p>
-                </div>
-                <div class="bg-neutral-900 p-6 rounded-lg border border-[#FFC107] w-full hover:-translate-y-0.5 transition-transform duration-200">
-                  <p class="text-white font-lato text-center" itemprop="description">Harness Group Energy for Transformation</p>
-                </div>
-                <div class="bg-neutral-900 p-6 rounded-lg border border-[#FFC107] w-full hover:-translate-y-0.5 transition-transform duration-200">
-                  <p class="text-white font-lato text-center">
-                    <span itemprop="price">25</span>
-                    <meta itemprop="priceCurrency" content="USD">
-                    <meta itemprop="availability" content="InStock">
-                    Special Access
-                  </p>
-                </div>
-              </div>
-            </div>
-        
-            <!-- CTA Button -->
-            <div class="text-center mt-12">
-              <button class="bg-[#FFC107] text-black px-8 py-4 rounded-full font-montserrat font-bold text-lg 
-                hover:bg-[#FFD700] transition-colors duration-200
-                w-full md:w-auto" 
-                onclick="window.location.href='#pricing'"
-                aria-label="Register for Soul Integration Accelerator Live Sessions">
-                <span>LIMITED SEATS AVAILABLE - CLAIM YOURS FOR $25</span>
-              </button>
-            </div>
-        
-            <!-- SEO Meta Description -->
-            <meta name="description" content="Compare Live Soul Integration Sessions vs Pre-recorded Courses. Get personalized guidance, live Q&A, and group transformation for just $25. Limited time offer!">
-          </div>
-        </section>
-          
-      </section>
-      <!-- , -->
-      <section id="section-d95436cc-cf92-477b-be8e-50ca49daa3ca">
-        <section id="pricing" class="py-20 bg-neutral-900" itemscope itemtype="http://schema.org/Offer">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Title Section -->
-            <div class="text-center mb-16">
-              <h2 class="text-white font-montserrat text-4xl md:text-5xl font-bold mb-4" itemprop="name">
-                EXCLUSIVE LIVE EVENT PACKAGE
-              </h2>
-              <meta itemprop="description" content="Comprehensive live event package including masterclass, support, and direct access to Reginald" />
-              <div class="w-48 h-1 bg-[#FFC107] mx-auto"></div>
-            </div>
-        
-            <div class="max-w-4xl mx-auto">
-              <div class="grid gap-8">
-                <!-- Value Stack Cards -->
-                <div class="bg-black p-4 sm:p-8 rounded-lg border border-[#FFC107] hover:shadow-lg hover:shadow-[#FFC107]/20 transition-all duration-300" itemscope itemtype="http://schema.org/Product">
-                  <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-4">
-                    <svg class="w-6 h-6 text-[#FFC107] flex-shrink-0 mb-2 sm:mb-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center w-full">
-                      <span class="text-white font-lato text-lg mb-2 sm:mb-0" itemprop="name">Live 2-Hour Masterclass</span>
-                      <span class="text-[#FFC107] font-montserrat font-bold" itemprop="price">$99</span>
-                      <meta itemprop="priceCurrency" content="USD" />
-                    </div>
-                  </div>
-                </div>
-        
-                <div class="bg-black p-4 sm:p-8 rounded-lg border border-[#FFC107] hover:shadow-lg hover:shadow-[#FFC107]/20 transition-all duration-300" itemscope itemtype="http://schema.org/Product">
-                  <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-4">
-                    <svg class="w-6 h-6 text-[#FFC107] flex-shrink-0 mb-2 sm:mb-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center w-full">
-                      <span class="text-white font-lato text-lg mb-2 sm:mb-0" itemprop="name">Real-Time Integration Support</span>
-                      <span class="text-[#FFC107] font-montserrat font-bold" itemprop="price">$147</span>
-                      <meta itemprop="priceCurrency" content="USD" />
-                    </div>
-                  </div>
-                </div>
-        
-                <div class="bg-black p-4 sm:p-8 rounded-lg border border-[#FFC107] hover:shadow-lg hover:shadow-[#FFC107]/20 transition-all duration-300" itemscope itemtype="http://schema.org/Product">
-                  <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-4">
-                    <svg class="w-6 h-6 text-[#FFC107] flex-shrink-0 mb-2 sm:mb-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center w-full">
-                      <span class="text-white font-lato text-lg mb-2 sm:mb-0" itemprop="name">Direct Access to Reginald</span>
-                      <span class="text-[#FFC107] font-montserrat font-bold" itemprop="price">$197</span>
-                      <meta itemprop="priceCurrency" content="USD" />
-                    </div>
-                  </div>
-                </div>
-        
-                <div class="bg-black p-4 sm:p-8 rounded-lg border border-[#FFC107] hover:shadow-lg hover:shadow-[#FFC107]/20 transition-all duration-300" itemscope itemtype="http://schema.org/Product">
-                  <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-4">
-                    <svg class="w-6 h-6 text-[#FFC107] flex-shrink-0 mb-2 sm:mb-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center w-full">
-                      <span class="text-white font-lato text-lg mb-2 sm:mb-0" itemprop="name">Implementation Framework</span>
-                      <span class="text-[#FFC107] font-montserrat font-bold" itemprop="price">$97</span>
-                      <meta itemprop="priceCurrency" content="USD" />
-                    </div>
-                  </div>
-                </div>
-        
-                <!-- Total Value -->
-                <div class="mt-8 p-4 sm:p-8 bg-[#FFC107] rounded-lg text-center">
-                  <div class="flex flex-col sm:flex-row justify-between items-center mb-4">
-                    <span class="text-black font-montserrat text-xl font-bold mb-2 sm:mb-0">Total Value:</span>
-                    <span class="text-black font-montserrat text-xl font-bold" itemprop="price">$540</span>
-                    <meta itemprop="priceCurrency" content="USD" />
-                  </div>
-                  <div class="flex flex-col sm:flex-row justify-between items-center">
-                    <span class="text-black font-montserrat text-2xl font-bold mb-2 sm:mb-0">Your Investment:</span>
-                    <span class="text-black font-montserrat text-2xl font-bold" itemprop="price">$25</span>
-                    <meta itemprop="priceCurrency" content="USD" />
-                  </div>
-                </div>
-        
-                <!-- CTA Button -->
-                <div class="text-center mt-8">
-                  <button class="w-full sm:w-auto bg-[#FFC107] text-black px-8 sm:px-12 py-4 rounded-full font-montserrat text-lg sm:text-xl font-bold transition-all duration-300 hover:bg-[#FFD700] hover:shadow-lg hover:shadow-[#FFC107]/30" 
-                    onclick="window.location.href='#cta'" 
-                    aria-label="Secure your spot for the exclusive live event package">
-                    <span>JOIN JANUARY 18TH - SPOTS FILLING FAST</span>
-                  </button>
-                  <p class="text-white/80 mt-4 font-lato">Limited Time Offer - Save 95% Today</p>
-                  <meta itemprop="availability" content="LimitedAvailability" />
-                  <meta itemprop="priceValidUntil" content="2025-01-17" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </section>
-      <!-- , -->
-      <section id="section-9cd98008-8bcb-4848-bb74-85482ea64e9d">
-         <!-- CTA Section with Enhanced SEO -->
-         <section id="cta" class="py-24 bg-black relative overflow-x-hidden w-full" itemscope itemtype="http://schema.org/Event">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <div class="text-center space-y-8">
-              <h1 class="text-white font-montserrat text-4xl md:text-6xl font-bold mb-8" itemprop="name">
-                Transform Your Life Through
-                <span class="text-[#FFC107] inline-block" itemprop="about">Soul Integration</span>
-              </h1>
-              
-              <div class="max-w-3xl mx-auto mb-12">
-                <p class="text-white/90 font-lato text-xl md:text-2xl leading-relaxed" itemprop="description">
-                  Join us for a transformative journey to reclaim your divine essence and shift from guilt to empowerment.
-                </p>
-              </div>
-              
-              <div class="space-y-8">
-                <button class="group w-full md:w-auto bg-[#FFC107] text-black px-6 md:px-12 py-4 md:py-6 rounded-full font-montserrat text-lg md:text-2xl font-bold hover:bg-[#FFD700] transition-all duration-300" 
-                        onclick="window.open('https://book.stripe.com/dR600lcNr86b4uI3cc', '_blank')">
-                  <span class="relative z-10">
-                    <meta itemprop="startDate" content="2025-01-18T00:00:00">
-                    <meta itemprop="price" content="25.00">
-                    <meta itemprop="priceCurrency" content="USD">
-                    YES, I'M READY TO TRANSFORM - LAST CHANCE $25
-                  </span>
-                </button>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Soul Integration Accelerator</title>
+  <script>
+    document.title = "Soul Integration Accelerator";
+  </script>
+  <style>
+    html, body { margin: 0; padding: 0; height: 100%; }
+  </style>
+</head>
+<body>
+<section id="section-a6f32cc9-d3b1-4dab-9ea9-d85f937a5f5c">
                 
-                <div class="flex flex-col items-center gap-4 mt-4">
-                  <p class="text-white/70 text-sm font-lato">Payment link will open in a new tab via our secure Stripe checkout</p>
-                  <div class="flex items-center gap-2">
-                    <svg class="w-6 h-6 text-[#FFC107]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span class="text-white font-lato">Limited Spots Available</span>
-                  </div>
-                </div>
+                <htmlcode id="el-9hy2pgh8">
+<div id="root">
+  <nav id="navbar" class="fixed w-full z-50 bg-neutral-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="el-qyzqfgqd">
+      <div class="flex items-center justify-between h-16" id="el-exr865xa">
+        <div class="flex items-center" id="el-qzv7vzso">
+          <div class="flex-shrink-0" id="el-e1r57tnl">
+            <h1 class="text-sm md:text-base font-bold transition-opacity duration-300 opacity-100 element-highlight" id="el-gs3zs2sw">Soul Integration Accelerator</h1>
+          </div>
+        </div>
+        <div class="hidden md:block" id="el-acxw0f6o">
+          <div class="ml-10 flex items-baseline space-x-4" id="el-l93b37o6">
+            <a href="#problem" class="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium" id="el-c82yzk37">Problem</a>
+            <a href="#transformation" class="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium" id="el-9i73wgff">Transformation</a>
+            <a href="#benefits" class="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium" id="el-zzg2691t">Benefits</a>
+            <a href="#offer" class="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium" id="el-2h1nhvva">Offer</a>
+            <a href="#instructor" class="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium" id="el-kzzv5nzj">Instructor</a>
+            <a href="#testimonials" class="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium" id="el-h84n24in">Testimonials</a>
+            <a href="#faq" class="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium" id="el-th7qgg48">FAQ</a>
+            <a href="#pricing" class="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-md text-sm font-medium animate__animated animate__pulse animate__infinite" id="el-xiopwhsm">Join Now</a>
+          </div>
+        </div>
+        <div class="md:hidden flex items-center" id="el-ivin0kct">
+          <button type="button" class="hamburger inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-neutral-700 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" id="el-9nwikpa0">
+            <span class="sr-only" id="el-oxp2vnfs">Open main menu</span>
+            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-kaeqc7rc">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" id="el-33n1mpa2"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="md:hidden hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-neutral-900" id="el-cmyjsvoa">
+        <a href="#problem" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700" id="el-bwgbpcge">Problem</a>
+        <a href="#transformation" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700" id="el-16xf5iyu">Transformation</a>
+        <a href="#benefits" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700" id="el-9dh84ivs">Benefits</a>
+        <a href="#offer" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700" id="el-en5wsvsw">Offer</a>
+        <a href="#instructor" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700" id="el-fjhpd3ng">Instructor</a>
+        <a href="#testimonials" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700" id="el-icunw07k">Testimonials</a>
+        <a href="#faq" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700" id="el-pe4d2dpi">FAQ</a>
+        <a href="#pricing" class="block px-3 py-2 rounded-md text-base font-medium bg-purple-600 hover:bg-purple-700" id="el-p1flycrl">Join Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.querySelector('.hamburger');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      hamburger.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+        const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+        hamburger.setAttribute('aria-expanded', !isExpanded);
+      });
+
+      // Close mobile menu when clicking a link
+      const mobileLinks = mobileMenu.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          hamburger.setAttribute('aria-expanded', 'false');
+        });
+      });
+    });
+  </script>
+</div>
+</htmlcode>
+              
+              </section>,<section id="section-4ea214f7-288e-48aa-84c1-cee51ed264e1">
+                <htmlcode id="el-s7lrn3yl">
+<div id="root">
+  <section id="hero" class="min-h-[70vh] bg-neutral-900 text-white pt-16 element-highlight">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20" id="el-pfc42xoc">
+      <div class="grid md:grid-cols-2 gap-12 items-center" id="el-kkfefjj0">
+        <div class="animate__animated animate__fadeInLeft" id="el-nkmgyivh">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6" id="el-ehjvmrla">
+            Break Free from Religious Guilt and Unlock a Life of Divine Empowerment
+            <span class="text-purple-400" id="el-hdvo0fqy">—In Just 2 Hours</span>
+          </h1>
+          <p class="text-xl md:text-2xl text-neutral-300 mb-8 leading-relaxed element-highlight" id="el-us1b7bk9">
+            Discover a Step-by-Step Process to Release Limiting Beliefs, Heal Emotional Residue, and
+            Reclaim Your True Spiritual Power Using Ancient Kemetic Wisdom
+            <span class="text-purple-400 font-bold" id="el-k55xfh7e">—All for Just $25.</span>
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 element-highlight" id="el-aojgptww">
+            <!-- <a href="#pricing" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 animate__animated animate__pulse animate__infinite element-highlight" id="el-49p8fu0k">
+              Reserve Your Spot Now
+            </a> -->
+            <a href="#problem" class="inline-block bg-transparent border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-3 px-8 rounded-lg text-lg transition-all duration-300" id="el-ojb9k66s">
+              Learn More
+            </a>
+          </div>
+        </div>
+        <div class="relative animate__animated animate__fadeInRight" id="el-509mf0r3">
+          <div class="absolute inset-0 bg-gradient-to-br from-purple-600/30 to-neutral-900/30 rounded-lg" id="el-qvqi7gm0"></div>
+          <div class="bg-neutral-800 p-8 rounded-lg border border-purple-400/20" id="el-c212l9jz">
+            <div class="space-y-4" id="el-6utlyhlc">
+              <p class="text-2xl font-semibold mb-6" id="el-ozw0cy85">Transform Your Life Today</p>
+              <div class="flex items-center space-x-3" id="el-xmugtbll">
+                <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="el-qxyjzs96">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" id="el-17d7gjfx"></path>
+                </svg>
+                <p id="el-r67ayj8w">Release limiting beliefs and past conditioning</p>
+              </div>
+              <div class="flex items-center space-x-3" id="el-rpwsa8j3">
+                <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="el-rpw904ps">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" id="el-oohhgmm0"></path>
+                </svg>
+                <p id="el-ug5zu4ml">Discover ancient Kemetic wisdom</p>
+              </div>
+              <div class="flex items-center space-x-3" id="el-2qg16fsd">
+                <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="el-o09q05bs">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" id="el-nb6tot4x"></path>
+                </svg>
+                <p id="el-uc61f6vi">Reclaim your divine power</p>
               </div>
             </div>
           </div>
-        </section>
-         
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlcode>
+              </section>,<section id="section-eb18ab0f-e374-4683-b294-71bb99c7f7be"><htmlCode>
+<div id="root">
+  <section id="problem" class="bg-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">Do You Feel Spiritually Conflicted?</h2>
+        <p class="text-xl text-neutral-600">If you've ever felt these emotional chains, you're not alone...</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-neutral-50 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInUp">
+          <div class="text-purple-600 mb-4">
+            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-neutral-900">Persistent Guilt and Shame</h3>
+          <p class="text-neutral-600">Carrying the heavy burden of past teachings that make you question your worth and actions.</p>
+        </div>
+
+        <div class="bg-neutral-50 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInUp animate__delay-1s">
+          <div class="text-purple-600 mb-4">
+            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-neutral-900">Fear of Questioning</h3>
+          <p class="text-neutral-600">Hesitating to explore deeper truths and follow your authentic spiritual path.</p>
+        </div>
+
+        <div class="bg-neutral-50 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInUp animate__delay-2s">
+          <div class="text-purple-600 mb-4">
+            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-neutral-900">External Validation</h3>
+          <p class="text-neutral-600">Constantly seeking approval from others to feel spiritually worthy and validated.</p>
+        </div>
+      </div>
+
+      <div class="mt-16 text-center animate__animated animate__fadeIn animate__delay-3s">
+        <p class="text-xl text-neutral-700 mb-8">You were never broken—only misinformed.</p>
+        <div class="inline-flex items-center bg-purple-600 text-white px-8 py-4 rounded-lg hover:bg-purple-700 transition-colors duration-300">
+          <span class="mr-2">👉</span>
+          <p class="font-semibold">This 2-hour intensive will reveal how to free yourself from these emotional chains and reconnect with your divine essence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></section>,<section id="section-3bb15d6f-3cb6-41a8-9d31-f0211ba808da"><htmlCode>
+<div id="root">
+  <section id="transformation" class="bg-neutral-900 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="animate__animated animate__fadeInLeft">
+          <h2 class="text-3xl md:text-4xl font-bold mb-8">Imagine Living a Life Where...</h2>
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4 transform hover:translate-x-2 transition-transform duration-300">
+              <div class="flex-shrink-0">
+                <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-purple-400">You Feel Spiritually Whole</h3>
+                <p class="mt-2 text-neutral-300">No longer bound by guilt or shame, embracing your authentic spiritual journey.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4 transform hover:translate-x-2 transition-transform duration-300">
+              <div class="flex-shrink-0">
+                <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-purple-400">You Trust Your Inner Wisdom</h3>
+                <p class="mt-2 text-neutral-300">Free from fear and self-doubt, confidently following your spiritual guidance.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4 transform hover:translate-x-2 transition-transform duration-300">
+              <div class="flex-shrink-0">
+                <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-purple-400">You Reclaim Your Power</h3>
+                <p class="mt-2 text-neutral-300">Understanding that your struggles are pathways to growth and enlightenment.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-neutral-800 p-8 rounded-lg border border-purple-500/20 animate__animated animate__fadeInRight">
+          <h3 class="text-2xl font-bold mb-6">Soul Integration Accelerator Intensive</h3>
+          <p class="text-neutral-300 mb-6">Discover a transformational framework rooted in Kemetic principles—ancient teachings that emphasize inner divinity, truth, and self-mastery.</p>
+          <div class="bg-purple-900/30 p-6 rounded-lg">
+            <h4 class="text-lg font-semibold mb-4 text-purple-400">What You'll Discover:</h4>
+            <ul class="space-y-3 text-neutral-300">
+              <li class="flex items-center">
+                <span class="text-purple-400 mr-2">•</span>
+                Ancient Kemetic Wisdom
+              </li>
+              <li class="flex items-center">
+                <span class="text-purple-400 mr-2">•</span>
+                Inner Divinity Practices
+              </li>
+              <li class="flex items-center">
+                <span class="text-purple-400 mr-2">•</span>
+                Self-Mastery Techniques
+              </li>
+            </ul>
+          </div>
+          <a href="#pricing" class="mt-8 block text-center bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+            Begin Your Transformation
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></section>,<section id="section-f67d2a32-cd52-4c94-8e12-1448a5d3d948"><htmlCode>
+<div id="root">
+  <section id="benefits" class="bg-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">Here's What You'll Experience in This 2-Hour Intensive</h2>
+        <p class="text-xl text-neutral-600">Transform your spiritual journey with these powerful benefits</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-neutral-50 rounded-xl p-6 shadow-lg transform hover:-translate-y-2 transition-all duration-300 animate__animated animate__fadeInUp">
+          <div class="text-purple-600 mb-4">
+            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-neutral-900">Break Free from Limiting Beliefs</h3>
+          <p class="text-neutral-600">Identify and rewrite subconscious beliefs that no longer serve you.</p>
+        </div>
+
+        <div class="bg-neutral-50 rounded-xl p-6 shadow-lg transform hover:-translate-y-2 transition-all duration-300 animate__animated animate__fadeInUp animate__delay-1s">
+          <div class="text-purple-600 mb-4">
+            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-neutral-900">Master Emotional Transformation</h3>
+          <p class="text-neutral-600">Reframe guilt and unworthiness using ancient Kemetic wisdom.</p>
+        </div>
+
+        <div class="bg-neutral-50 rounded-xl p-6 shadow-lg transform hover:-translate-y-2 transition-all duration-300 animate__animated animate__fadeInUp animate__delay-2s">
+          <div class="text-purple-600 mb-4">
+            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-neutral-900">Practical Tools for Freedom</h3>
+          <p class="text-neutral-600">Engage in guided reflection exercises for immediate breakthroughs.</p>
+        </div>
+
+        <div class="bg-neutral-50 rounded-xl p-6 shadow-lg transform hover:-translate-y-2 transition-all duration-300 animate__animated animate__fadeInUp animate__delay-3s">
+          <div class="text-purple-600 mb-4">
+            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-neutral-900">Reclaim Your Divine Power</h3>
+          <p class="text-neutral-600">Shift from self-doubt to personal empowerment with a proven process.</p>
+        </div>
+      </div>
+
+      <div class="mt-16 bg-purple-100 rounded-2xl p-8 animate__animated animate__fadeIn animate__delay-4s">
+        <h3 class="text-2xl font-bold text-center text-purple-900 mb-8">🔥 PLUS, You'll Receive These Bonuses (For FREE!)</h3>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="flex items-start space-x-4">
+            <span class="text-4xl">🎁</span>
+            <div>
+              <h4 class="text-xl font-semibold text-neutral-900">Reframing Beliefs Journal</h4>
+              <p class="text-neutral-700">A guided workbook to continue your breakthroughs after the class.</p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-4">
+            <span class="text-4xl">🎁</span>
+            <div>
+              <h4 class="text-xl font-semibold text-neutral-900">Powerful Affirmations Guide</h4>
+              <p class="text-neutral-700">Reprogram your mindset with positive affirmations.</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-8">
+          <p class="text-2xl font-bold text-purple-900">Total Value: <span class="line-through">$97</span> – Yours for Just $25 Today!</p>
+          <a href="#pricing" class="inline-block mt-6 bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+            Claim Your Spot Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></section>,<section id="section-a34a3915-ac0b-4f46-930f-6108b9c24521"><htmlCode>
+<div id="root">
+  <section id="offer" class="bg-neutral-900 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <span class="text-purple-400 text-lg font-semibold">Special Limited Time Offer</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mt-4">Transform Your Spiritual Journey Today</h2>
+      </div>
+
+      <div class="bg-neutral-800 rounded-2xl p-8 md:p-12 shadow-xl border border-purple-500/20 animate__animated animate__fadeInUp">
+        <div class="grid md:grid-cols-2 gap-12">
+          <div class="space-y-6">
+            <div class="flex items-center space-x-4">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 rounded-full bg-purple-600 flex items-center justify-center">
+                  <span class="text-2xl">🎯</span>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white">2-Hour Intensive Workshop</h3>
+                <p class="text-neutral-300">Deep dive into ancient Kemetic wisdom and transformational practices</p>
+              </div>
+            </div>
+
+            <div class="flex items-center space-x-4">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 rounded-full bg-purple-600 flex items-center justify-center">
+                  <span class="text-2xl">📘</span>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white">Reframing Beliefs Journal</h3>
+                <p class="text-neutral-300">Guided workbook for continued breakthroughs ($47 Value)</p>
+              </div>
+            </div>
+
+            <div class="flex items-center space-x-4">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 rounded-full bg-purple-600 flex items-center justify-center">
+                  <span class="text-2xl">✨</span>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white">Affirmations Guide</h3>
+                <p class="text-neutral-300">Powerful mindset reprogramming tools ($50 Value)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-neutral-900 rounded-xl p-8 flex flex-col justify-center">
+            <div class="text-center">
+              <p class="text-neutral-400 text-lg mb-2">Total Value</p>
+              <p class="text-3xl font-bold text-white mb-2"><span class="line-through text-neutral-500">$97</span></p>
+              <p class="text-neutral-400 text-lg mb-4">Special Offer Price</p>
+              <p class="text-5xl font-bold text-purple-400 mb-6">$25</p>
+              <div class="space-y-4">
+                <a href="#pricing" class="block w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 animate__animated animate__pulse animate__infinite">
+                  Reserve Your Spot Now
+                </a>
+                <p class="text-neutral-400 text-sm">Limited Time Offer - Spots Are Filling Fast!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 border-t border-neutral-700 pt-8">
+          <h4 class="text-center text-xl font-bold text-white mb-6">100% Satisfaction Guaranteed</h4>
+          <div class="grid md:grid-cols-3 gap-6 text-center">
+            <div class="p-4">
+              <span class="text-2xl mb-2 block">🔒</span>
+              <h5 class="text-lg font-semibold text-white mb-2">Secure Payment</h5>
+              <p class="text-neutral-400">Your transaction is protected</p>
+            </div>
+            <div class="p-4">
+              <span class="text-2xl mb-2 block">⚡</span>
+              <h5 class="text-lg font-semibold text-white mb-2">Instant Access</h5>
+              <p class="text-neutral-400">Begin your journey immediately</p>
+            </div>
+            <div class="p-4">
+              <span class="text-2xl mb-2 block">💫</span>
+              <h5 class="text-lg font-semibold text-white mb-2">Transformational Results</h5>
+              <p class="text-neutral-400">Proven methodology for change</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></section>,<section id="section-b6208f7d-7075-4cf6-af10-60fb30131ccc"><htmlCode>
+<div id="root">
+  <section id="instructor" class="bg-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="animate__animated animate__fadeInLeft">
+          <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">Why Trust This Process?</h2>
+          <div class="prose prose-lg text-neutral-600 mb-8">
+            <p>I've guided hundreds of truth-seekers through this exact process—helping them release fear-based beliefs and step into self-empowerment.</p>
+          </div>
+
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0">
+                <div class="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-neutral-900">Ancient Wisdom Meets Modern Techniques</h3>
+                <p class="text-neutral-600">Blending timeless Kemetic principles with contemporary personal growth methods</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0">
+                <div class="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-neutral-900">Emotional Release Focus</h3>
+                <p class="text-neutral-600">Specialized in spiritual empowerment and emotional healing</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0">
+                <div class="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-neutral-900">Proven Transformation Method</h3>
+                <p class="text-neutral-600">Practical and repeatable process designed for lasting change</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-neutral-50 p-8 rounded-xl shadow-lg animate__animated animate__fadeInRight">
+          <div class="text-center mb-8">
+            <div class="w-24 h-24 bg-purple-600 rounded-full mx-auto flex items-center justify-center mb-4">
+              <span class="text-4xl text-white">👨‍🏫</span>
+            </div>
+            <h3 class="text-2xl font-bold text-neutral-900">Your Guide to Spiritual Freedom</h3>
+            <p class="text-neutral-600 mt-2">Experienced Spiritual Guide & Transformation Coach</p>
+          </div>
+
+          <div class="space-y-4">
+            <div class="bg-white p-4 rounded-lg shadow">
+              <p class="text-neutral-700"><span class="font-bold">Experience:</span> Guided hundreds of truth-seekers to spiritual freedom</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow">
+              <p class="text-neutral-700"><span class="font-bold">Expertise:</span> Ancient Kemetic wisdom & modern transformation techniques</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow">
+              <p class="text-neutral-700"><span class="font-bold">Mission:</span> Empowering individuals to break free from religious guilt</p>
+            </div>
+          </div>
+
+          <div class="mt-8 text-center">
+            <a href="#pricing" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              Join My Next Session
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></section>,<section id="section-a268e94c-add7-4fbc-95ef-d5f194232254">
+                <htmlcode id="el-ewk4tl39">
+<div id="root">
+  <section id="testimonials" class="bg-neutral-900 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="el-wyv7r6wi">
+  <div class="text-center mb-16 animate__animated animate__fadeIn">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Transformational Stories</h2>
+    <p class="text-xl text-neutral-300">Hear from those who've experienced the breakthrough</p>
+  </div>
+
+  <div class="testimonial-slider relative">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <!-- Testimonial 1 -->
+        <div class="swiper-slide">
+          <div class="bg-neutral-800 p-8 rounded-xl border border-purple-500/20">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center">
+                <span class="text-xl">👤</span>
+              </div>
+              <div class="ml-4">
+                <h4 class="text-white font-semibold">Dr. Dave Patrick Lavigne</h4>
+                <p class="text-neutral-400">Verified Reviewer</p>
+              </div>
+            </div>
+            <p class="text-neutral-300 mb-4">"I did my research on a lot of things you talked about, and you are correct in everything you said. That means a lot today. People have been lied to and misled in many things and places. Finding good, honest people is problematic because some will say one thing and mean another. Thank you for your integrity, honesty, and willingness to put everything on the line for people."</p>
+            <div class="flex text-purple-400">★★★★★</div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="swiper-slide">
+          <div class="bg-neutral-800 p-8 rounded-xl border border-purple-500/20">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center">
+                <span class="text-xl">👤</span>
+              </div>
+              <div class="ml-4">
+                <h4 class="text-white font-semibold">Jennifer A.</h4>
+                <p class="text-neutral-400">@jennifer_a</p>
+              </div>
+            </div>
+            <p class="text-neutral-300 mb-4">"Your ability to break down complex ideas into simple and relatable truths is unmatched. You've helped me see things from a new perspective, and it has truly transformed the way I approach life. Thank you for your wisdom and kindness."</p>
+            <div class="flex text-purple-400">★★★★★</div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="swiper-slide">
+          <div class="bg-neutral-800 p-8 rounded-xl border border-purple-500/20">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center">
+                <span class="text-xl">👤</span>
+              </div>
+              <div class="ml-4">
+                <h4 class="text-white font-semibold">Matthew C.</h4>
+                <p class="text-neutral-400">@matthewc_1990</p>
+              </div>
+            </div>
+            <p class="text-neutral-300 mb-4">"I've been following your work for a while now, and every time I learn something new. You have a way of connecting the dots that no one else does. I feel so much more empowered and informed. Thank you for being a guiding light!"</p>
+            <div class="flex text-purple-400">★★★★★</div>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="swiper-slide">
+          <div class="bg-neutral-800 p-8 rounded-xl border border-purple-500/20">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center">
+                <span class="text-xl">👤</span>
+              </div>
+              <div class="ml-4">
+                <h4 class="text-white font-semibold">Sarah</h4>
+                <p class="text-neutral-400">@sarah_freedom</p>
+              </div>
+            </div>
+            <p class="text-neutral-300 mb-4">"Your authenticity and passion shine through in everything you do. It's refreshing to find someone who genuinely cares about making a difference. I can't thank you enough for the clarity and hope you've brought into my life."</p>
+            <div class="flex text-purple-400">★★★★★</div>
+          </div>
+        </div>
+
+        <!-- Additional testimonials following the same pattern -->
+        <div class="swiper-slide">
+          <div class="bg-neutral-800 p-8 rounded-xl border border-purple-500/20">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center">
+                <span class="text-xl">👤</span>
+              </div>
+              <div class="ml-4">
+                <h4 class="text-white font-semibold">Truth Seeker</h4>
+                <p class="text-neutral-400">@truthseeker89</p>
+              </div>
+            </div>
+            <p class="text-neutral-300 mb-4">"Thank you for challenging my beliefs and encouraging me to think critically. You've opened my eyes to truths I didn't know I needed, and it's been an incredible journey of self-discovery and growth. Keep up the amazing work!"</p>
+            <div class="flex text-purple-400">★★★★★</div>
+          </div>
+        </div>
+
+        <!-- Continue with remaining testimonials... -->
+
+      </div>
+    </div>
+    <div class="swiper-pagination mt-8"></div>
+  </div>
+</div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      new Swiper('.testimonial-slider .swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2
+          },
+          1024: {
+            slidesPerView: 3
+          }
+        },
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false
+        }
+      });
+    });
+  </script>
+</div>
+</htmlcode>
+              </section>,<section id="section-9d1c3569-aec8-45b1-b254-08545b41aaf6"><htmlCode>
+<div id="root">
+  <section id="pricing" class="bg-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">🔥 Ready to Reclaim Your True Power? 🔥</h2>
+        <p class="text-xl text-neutral-600">Join this transformational journey today</p>
+      </div>
+
+      <div class="max-w-3xl mx-auto">
+        <div class="bg-neutral-50 rounded-2xl shadow-xl overflow-hidden animate__animated animate__fadeInUp">
+          <div class="bg-purple-600 p-8 text-center">
+            <h3 class="text-2xl font-bold text-white mb-2">Soul Integration Accelerator Intensive</h3>
+            <p class="text-purple-100">2-Hour Transformational Experience</p>
+          </div>
+
+          <div class="p-8">
+            <div class="flex justify-center items-center mb-8">
+              <span class="text-neutral-400 text-2xl line-through mr-4">$97</span>
+              <span class="text-4xl font-bold text-purple-600">$25</span>
+            </div>
+
+            <div class="space-y-4 mb-8">
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-purple-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-neutral-700">2-Hour Intensive Workshop</span>
+              </div>
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-purple-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-neutral-700">Reframing Beliefs Journal (Worth $47)</span>
+              </div>
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-purple-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-neutral-700">Powerful Affirmations Guide (Worth $50)</span>
+              </div>
+            </div>
+
+            <div class="text-center space-y-6">
+              <a href="https://book.stripe.com/dR600lcNr86b4uI3cc" class="block w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 animate__animated animate__pulse animate__infinite">
+                Reserve Your Spot Now - Only $25
+              </a>
+              <p class="text-red-500 font-semibold">⚡ Limited Time Offer - Spots Are Filling Fast!</p>
+            </div>
+          </div>
+
+          <div class="bg-neutral-100 p-6 border-t border-neutral-200">
+            <div class="grid md:grid-cols-3 gap-4 text-center">
+              <div>
+                <span class="block text-2xl mb-2">🔒</span>
+                <p class="text-sm text-neutral-600">Secure Payment</p>
+              </div>
+              <div>
+                <span class="block text-2xl mb-2">⚡</span>
+                <p class="text-sm text-neutral-600">Instant Access</p>
+              </div>
+              <div>
+                <span class="block text-2xl mb-2">💫</span>
+                <p class="text-sm text-neutral-600">Life-Changing Results</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center animate__animated animate__fadeIn animate__delay-1s">
+          <h4 class="text-2xl font-bold text-neutral-900 mb-4">You Deserve Spiritual Freedom</h4>
+          <p class="text-neutral-600 max-w-2xl mx-auto">Join this 2-hour immersive experience and let go of guilt, shame, and self-doubt—so you can finally step into the life you were meant to live.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></section>,<section id="section-849cf5d1-9bf3-4a04-8768-01a687c91d88"><htmlCode>
+<div id="root">
+  <section id="faq" class="bg-neutral-900 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+        <p class="text-xl text-neutral-300">Everything you need to know about the Soul Integration Intensive</p>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-6">
+        <!-- FAQ Item 1 -->
+        <div class="bg-neutral-800 rounded-lg animate__animated animate__fadeInUp">
+          <button class="faq-btn w-full flex justify-between items-center p-6 focus:outline-none">
+            <span class="text-lg font-semibold text-white">How is the intensive conducted?</span>
+            <svg class="w-6 h-6 text-purple-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="faq-content hidden p-6 pt-0 text-neutral-300">
+            The intensive is conducted online via Webinar Ninja platform. You'll receive access details after registration. The session includes guided exercises, teachings, and interactive elements.
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="bg-neutral-800 rounded-lg animate__animated animate__fadeInUp animate__delay-1s">
+          <button class="faq-btn w-full flex justify-between items-center p-6 focus:outline-none">
+            <span class="text-lg font-semibold text-white">What if I can't attend live?</span>
+            <svg class="w-6 h-6 text-purple-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="faq-content hidden p-6 pt-0 text-neutral-300">
+            You'll receive a recording of the session at an additional fee, plus all bonus materials. However, we recommend attending live for the full interactive experience.
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="bg-neutral-800 rounded-lg animate__animated animate__fadeInUp animate__delay-2s">
+          <button class="faq-btn w-full flex justify-between items-center p-6 focus:outline-none">
+            <span class="text-lg font-semibold text-white">How do I access the bonus materials?</span>
+            <svg class="w-6 h-6 text-purple-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="faq-content hidden p-6 pt-0 text-neutral-300">
+            All bonus materials will be available after the webinar and details will be shared about it in the webinar.
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="bg-neutral-800 rounded-lg animate__animated animate__fadeInUp animate__delay-3s">
+          <button class="faq-btn w-full flex justify-between items-center p-6 focus:outline-none">
+            <span class="text-lg font-semibold text-white">Is this right for me if I'm new to spiritual work?</span>
+            <svg class="w-6 h-6 text-purple-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="faq-content hidden p-6 pt-0 text-neutral-300">
+            Yes! This intensive is designed for all levels. The teachings are accessible while remaining profound and transformative.
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12 animate__animated animate__fadeIn animate__delay-4s">
+        <p class="text-neutral-300 mb-6">Still have questions? We're here to help!</p>
+        <a href="mailto:support@kclcommunity.com" 
+         class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300">support@kclcommunity.com
+        </a>
+        
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const faqBtns = document.querySelectorAll('.faq-btn');
+      
+      faqBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const content = btn.nextElementSibling;
+          const arrow = btn.querySelector('svg');
           
-         <!-- Footer with Enhanced SEO -->
-         <!-- SEO Meta Tags -->
-         <meta name="description" content="Transform your life through soul integration. Join our transformative journey on January 18th to elevate your consciousness and unlock your true potential. Limited spots available at $25." id="el-s6fbuk7f">
-         <meta name="keywords" content="soul integration, spiritual transformation, consciousness elevation, personal development, spiritual journey" id="el-9i0xcsjr">
-         <meta property="og:title" content="Soul Integration Event - Transform Your Life" id="el-fmjc9750">
-         <meta property="og:description" content="Join our transformative journey to elevate your consciousness and unlock your true potential. Limited spots available." id="el-hv5z0dhw">
-         <meta property="og:type" content="event" id="el-9xar5op9">
-         <meta property="og:price:amount" content="25" id="el-qx0ixwbe">
-         <meta property="og:price:currency" content="USD" id="el-wqz8cyib">
-         <style>
-            @keyframes fadeInUp {
-            from {
-            opacity: 0;
-            transform: translateY(20px);
+          // Toggle content
+          content.classList.toggle('hidden');
+          
+          // Rotate arrow
+          arrow.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+          
+          // Close other FAQs
+          faqBtns.forEach(otherBtn => {
+            if (otherBtn !== btn) {
+              const otherContent = otherBtn.nextElementSibling;
+              const otherArrow = otherBtn.querySelector('svg');
+              otherContent.classList.add('hidden');
+              otherArrow.style.transform = 'rotate(0deg)';
             }
-            to {
-            opacity: 1;
-            transform: translateY(0);
-            }
-            }
-            @keyframes fadeIn {
-            from {
-            opacity: 0;
-            }
-            to {
-            opacity: 1;
-            }
-            }
-            @keyframes scaleX {
-            from {
-            opacity: 0;
-            transform: scaleX(0);
-            }
-            to {
-            opacity: 1;
-            transform: scaleX(1);
-            }
-            }
-         </style>
-      </section>
-      <section id="section-4b455069-39a0-412c-ada0-2739d82b46d2">
-         <div id="root">
-            <div id="footer-placeholder"></div>
-            <style>
-               @keyframes fadeInUp {
-               from {
-               opacity: 0;
-               transform: translateY(20px);
-               }
-               to {
-               opacity: 1;
-               transform: translateY(0);
-               }
-               }
-               @keyframes fadeIn {
-               from {
-               opacity: 0;
-               }
-               to {
-               opacity: 1;
-               }
-               }
-               @keyframes scaleX {
-               from {
-               opacity: 0;
-               transform: scaleX(0);
-               }
-               to {
-               opacity: 1;
-               transform: scaleX(1);
-               }
-               }
-            </style>
-         </div>
-      </section>
-   </body>
+          });
+        });
+      });
+    });
+  </script>
+</div>
+</htmlCode></section><section id="section-1023bb39-dc40-489a-9209-92c3e6d8af64">
+                <htmlcode>
+<div id="root">
+    <footer id="footer" class="bg-neutral-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            <!-- Left Column -->
+            <div class="space-y-4 text-left">
+              <h4 class="text-lg font-semibold">Quick Links</h4>
+              <ul class="space-y-2">
+                <li><a href="#hero" class="text-neutral-400 hover:text-[#FFC107]">Home</a></li>
+                <li><a href="#benefits" class="text-neutral-400 hover:text-[#FFC107]">Benefits</a></li>
+                <li><a href="#offer" class="text-neutral-400 hover:text-[#FFC107]">Offer</a></li>
+                <li><a href="#testimonials" class="text-neutral-400 hover:text-[#FFC107]">Testimonials</a></li>
+              </ul>
+            </div>
+    
+            <!-- Center Column -->
+            <div class="space-y-4 text-center">
+                <h3 class="text-xl font-bold text-purple-400">Soul Integration Accelerator</h3>
+                <p class="text-neutral-400">Transform your spiritual journey and reclaim your divine power.</p>
+                <div class="flex justify-center space-x-4">
+                  <!-- <a href="#" class="text-neutral-400 hover:text-[#FFC107]">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
+                    </svg>
+                  </a>
+                  <a href="#" class="text-neutral-400 hover:text-[#FFC107]">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                    </svg>
+                  </a>
+                  <a href="#" class="text-neutral-400 hover:text-[#FFC107]">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+                    </svg>
+                  </a> -->
+                </div>
+              </div>
+    
+            <!-- Right Column -->
+            <div class="space-y-4 text-right">
+              <h4 class="text-lg font-semibold">Support</h4>
+              <ul class="space-y-2">
+                <li><a href="#faq" class="text-neutral-400 hover:text-[#FFC107]">FAQ</a></li>
+                <li><a href="refund.html" class="text-neutral-400 hover:text-[#FFC107]">Refund</a></li>
+                <li><a href="privacy.html" class="text-neutral-400 hover:text-[#FFC107]">Privacy Policy</a></li>
+                <li><a href="terms-and-conditions.html" class="text-neutral-400 hover:text-[#FFC107]">Terms of Service</a></li>
+              </ul>
+            </div>
+          </div>
+    
+          <div class="border-t border-neutral-800 pt-8 text-center">
+            <p class="text-neutral-400">© 2025 Soul Integration. All rights reserved.</p>
+            <p>
+                Powered by <a href="https://socialrise.ai" target="_blank" rel="noopener noreferrer" class="text-purple-400 hover:underline">SocialRise.ai</a>
+            </p>
+          </div>
+        </div>
+      </footer>
+</div>
+</htmlcode>
+              </section>
+</body>
 </html>
