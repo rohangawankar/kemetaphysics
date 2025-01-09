@@ -47,17 +47,18 @@
             return false;
           }
           </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            fetch('footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer-placeholder').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading footer:', error));
-        });
-    </script>   
-    <link rel="icon" type="image/png" href="src/img/logo.png">
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                fetch('footer.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('footer-placeholder').innerHTML = data;
+                    })
+                    .catch(error => console.error('Error loading footer:', error));
+            });
+        </script>   
+        <link rel="icon" type="image/png" href="src/img/logo.png">
 </head>
 <body class="bg-black">
     <!-- Navbar -->
@@ -120,27 +121,41 @@
         </div>
     </main>
 
-    <!-- Footer Placeholder -->
-    <div id="footer-placeholder"></div>
+    <section id="section-4b455069-39a0-412c-ada0-2739d82b46d2">
+        <div id="root">
+            <div id="footer-placeholder"></div>
+            <style>
+                @keyframes fadeInUp {
+                from {
+                opacity: 0;
+                transform: translateY(20px);
+                }
+                to {
+                opacity: 1;
+                transform: translateY(0);
+                }
+                }
+                @keyframes fadeIn {
+                from {
+                opacity: 0;
+                }
+                to {
+                opacity: 1;
+                }
+                }
+                @keyframes scaleX {
+                from {
+                opacity: 0;
+                transform: scaleX(0);
+                }
+                to {
+                opacity: 1;
+                transform: scaleX(1);
+                }
+                }
+             </style>
+          </div>
+       </section>
 
-    <script>
-        // Navbar scroll behavior
-        let lastScroll = 0;
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll <= 0) {
-                navbar.style.transform = 'translateY(0)';
-                navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
-            } else if (currentScroll > lastScroll) {
-                navbar.style.transform = 'translateY(-100%)';
-            } else {
-                navbar.style.transform = 'translateY(0)';
-                navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.95)';
-            }
-            lastScroll = currentScroll;
-        });
-    </script>
 </body>
 </html>

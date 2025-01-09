@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Kametaphysics Course Details</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/png" href="/src/img/logo.png">
+          <!-- Google tag (gtag.js) -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-CGWB9TZ51J"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+    
+            gtag('config', 'G-CGWB9TZ51J');
+          </script>
+          <!-- Google Tag Manager -->
+          <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-TV55H4CZ');</script>
+          <!-- End Google Tag Manager -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        });
+    </script>   
+    <link rel="icon" type="image/png" href="src/img/logo.png">
+
 </head>
 <body class="bg-black">
     <!-- Navbar -->
@@ -14,7 +42,7 @@
             <div class="flex items-center justify-between h-20">
                 <div class="flex-shrink-0">
                     <a href="index.html" class="block transform hover:scale-105 transition-transform duration-300">
-                        <img src="/api/placeholder/80/80" alt="Logo" class="w-20 sm:w-24 h-auto pt-4">
+                        <img src="src/img/logo.png" alt="Logo" class="w-20 sm:w-24 h-auto pt-4">
                     </a>
                 </div>
                 <a href="index.html" class="text-white hover:text-[#FFC107] transition-all duration-300">
