@@ -507,36 +507,107 @@
                            </div> -->
                         </div>
                         <div class="relative animate__animated animate__fadeInRight">
+                           <!-- Background Gradient -->
                            <div class="absolute inset-0 bg-gradient-to-r from-purple-500/30 to-neutral-900/30 rounded-2xl"></div>
+                           
+                           <!-- Content Section -->
                            <div class="p-8 bg-neutral-800 rounded-2xl border border-purple-500/20 backdrop-blur-sm">
-                              <div class="space-y-6">
-                                 <div class="flex items-center space-x-4">
-                                    <div class="bg-purple-600 p-3 rounded-full">
-                                       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                                       </svg>
-                                    </div>
-                                    <p class="text-lg">Break Free from Limiting Patterns in Hours, Not Years</p>
+                             <div class="space-y-6">
+                               <!-- Key Features -->
+                               <div class="flex items-center space-x-4">
+                                 <div class="bg-purple-600 p-3 rounded-full">
+                                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                   </svg>
                                  </div>
-                                 <div class="flex items-center space-x-4">
-                                    <div class="bg-purple-600 p-3 rounded-full">
-                                       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                                       </svg>
-                                    </div>
-                                    <p class="text-lg">Master Powerful 5,000-Year-Old Spiritual Techniques</p>
+                                 <p class="text-lg">Break Free from Limiting Patterns in Hours, Not Years</p>
+                               </div>
+                               <div class="flex items-center space-x-4">
+                                 <div class="bg-purple-600 p-3 rounded-full">
+                                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                   </svg>
                                  </div>
-                                 <div class="flex items-center space-x-4">
-                                    <div class="bg-purple-600 p-3 rounded-full">
-                                       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                       </svg>
-                                    </div>
-                                    <p class="text-lg">Experience Immediate, Lasting Transformation</p>
+                                 <p class="text-lg">Master Powerful 5,000-Year-Old Spiritual Techniques</p>
+                               </div>
+                               <div class="flex items-center space-x-4">
+                                 <div class="bg-purple-600 p-3 rounded-full">
+                                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                   </svg>
                                  </div>
-                              </div>
+                                 <p class="text-lg">Experience Immediate, Lasting Transformation</p>
+                               </div>
+                             </div>
                            </div>
-                        </div>
+                           <!-- <div class="relative animate__animated animate__fadeInRight">
+                              <div class="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-neutral-900/30 rounded-lg"></div> -->
+                          
+                              <!-- <div class="mt-12 animate__animated animate__fadeIn element-highlight flex flex-col items-center"> -->
+                                  <h3 class="text-yellow-400 font-bold text-2xl mb-4 text-center">Time Remaining Until the Event</h3>
+                                  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto w-full">
+                                      <div class="bg-neutral-900/70 p-4 rounded-lg border border-yellow-400/30 text-center">
+                                          <div class="text-yellow-400 text-3xl md:text-4xl font-bold" id="days"></div>
+                                          <div class="text-white/80 text-sm">Days</div>
+                                      </div>
+                                      <div class="bg-neutral-900/70 p-4 rounded-lg border border-yellow-400/30 text-center">
+                                          <div class="text-yellow-400 text-3xl md:text-4xl font-bold" id="hours"></div>
+                                          <div class="text-white/80 text-sm">Hours</div>
+                                      </div>
+                                      <div class="bg-neutral-900/70 p-4 rounded-lg border border-yellow-400/30 text-center">
+                                          <div class="text-yellow-400 text-3xl md:text-4xl font-bold" id="minutes"></div>
+                                          <div class="text-white/80 text-sm">Minutes</div>
+                                      </div>
+                                      <div class="bg-neutral-900/70 p-4 rounded-lg border border-yellow-400/30 text-center">
+                                          <div class="text-yellow-400 text-3xl md:text-4xl font-bold" id="seconds"></div>
+                                          <div class="text-white/80 text-sm">Seconds</div>
+                                      </div>
+                                  </div>
+                              <!-- </div>
+                          </div> --> 
+                          
+
+                         </div>
+                         
+                         <!-- Countdown Timer Script -->
+                         <script>
+                           const countDownDate = new Date("Jan 18, 2025 10:00:00 CST").getTime();
+                         
+                           const x = setInterval(function() {
+                             const now = new Date().getTime();
+                             const distance = countDownDate - now;
+                         
+                             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                         
+                             document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+                             document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+                             document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+                             document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+                         
+                             if (distance < 0) {
+                               clearInterval(x);
+                               document.getElementById("days").innerHTML = "00";
+                               document.getElementById("hours").innerHTML = "00";
+                               document.getElementById("minutes").innerHTML = "00";
+                               document.getElementById("seconds").innerHTML = "00";
+                             }
+                           }, 1000);
+                         </script>
+                         
+                     </div>
+                     <div class="animate__animated animate__fadeIn animate__delay-1s">
+                        <br>
+                        <h2 class="text-white font-playfair text-xl md:text-xl font-bold mb-4 element-highlight" itemprop="name">
+                           SOUL INTEGRATION ACCELERATOR
+                        </h6>
+                        <p class="text-purple-400 font-lato text-xl md:text-2xl">
+                           <span class="md:inline" itemprop="eventType">Live Virtual Workshop</span>
+                           <span class="hidden md:inline"> - </span>
+                           <span class="block md:inline" itemprop="startDate" content="2025-01-18T10:00:00-06:00">January 18, 10 AM CST</span>
+                        </p>
                      </div>
                   </div>
                   <!-- <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-neutral-900 to-transparent"></div> -->
